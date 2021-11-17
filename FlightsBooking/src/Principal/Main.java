@@ -1,3 +1,5 @@
+package Principal;
+
 
 import Vistas.VistaInicial;
 
