@@ -1,7 +1,10 @@
+
+import Vistas.VistaInicial;
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hola mundo");
+        VistaInicial Vista=new VistaInicial();
+        Vista.setVisible(true);
     }
-    
 }
