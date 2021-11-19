@@ -27,105 +27,220 @@ public class VistaInicial extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel4 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        PanelAdministrador = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        ContraseñaAdmi = new javax.swing.JTextField();
+        UsuarioAdmi = new javax.swing.JTextField();
+        BotonContinuarAdmi = new javax.swing.JLabel();
+        BotonEliminar = new javax.swing.JLabel();
+        BotonConsultar = new javax.swing.JLabel();
+        BotonAgregar = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        PanelRegistro = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        BotonRegistrar = new javax.swing.JLabel();
+        ContrasenaRegistro = new javax.swing.JTextField();
+        NombresRegistro = new javax.swing.JTextField();
+        ApellidosRegistro = new javax.swing.JTextField();
+        PaisRegistro = new javax.swing.JTextField();
+        CelularRegistro = new javax.swing.JTextField();
+        CorreoRegistro = new javax.swing.JTextField();
+        FechaNacimientoRegistro = new javax.swing.JTextField();
+        ContraseñaRegistro = new javax.swing.JTextField();
+        PanelInicial = new javax.swing.JPanel();
+        NoPasaporte = new javax.swing.JTextField();
+        NombreUsuario = new javax.swing.JTextField();
+        Contraseña = new javax.swing.JPasswordField();
+        Imagen = new javax.swing.JLabel();
+        Imagen1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        BotonAdministrador = new javax.swing.JLabel();
+        BotonContinuar = new javax.swing.JLabel();
+        BotonRegistro = new javax.swing.JLabel();
+        PanelPrincipal = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        BotonMiCuenta = new javax.swing.JLabel();
+        BotonMisViajes = new javax.swing.JLabel();
+        BotonNotificaciones = new javax.swing.JLabel();
+        BotonAyuda = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel4.setBackground(new java.awt.Color(51, 255, 153));
-        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PanelAdministrador.setBackground(new java.awt.Color(0, 0, 102));
+        PanelAdministrador.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setText("jLabel2");
-        jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 28, 160, 164));
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Encabezado4.png"))); // NOI18N
+        PanelAdministrador.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 90));
 
-        jTextField1.setText("jTextField1");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jLabel8.setFont(new java.awt.Font("Arial Black", 3, 12)); // NOI18N
+        jLabel8.setText("Contraseña:");
+        PanelAdministrador.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
+
+        jLabel9.setFont(new java.awt.Font("Arial Black", 3, 12)); // NOI18N
+        jLabel9.setText("Nombre Usuario:");
+        PanelAdministrador.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
+
+        ContraseñaAdmi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                ContraseñaAdmiActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 220, 50));
+        PanelAdministrador.add(ContraseñaAdmi, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 180, -1));
 
-        jTextField2.setText("jTextField1");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        UsuarioAdmi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                UsuarioAdmiActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 220, 50));
+        PanelAdministrador.add(UsuarioAdmi, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 180, -1));
 
-        jButton5.setText("Continuar");
-        jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 280, -1, -1));
+        BotonContinuarAdmi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/CONTINUAR.png"))); // NOI18N
+        PanelAdministrador.add(BotonContinuarAdmi, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 130, -1, -1));
 
-        jButton6.setText("Registrarse");
-        jPanel4.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, -1, -1));
+        BotonEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ELIMINAR.png"))); // NOI18N
+        PanelAdministrador.add(BotonEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 370, -1, -1));
 
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 440));
+        BotonConsultar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/CONSULTAR.png"))); // NOI18N
+        PanelAdministrador.add(BotonConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, -1, -1));
 
-        jPanel1.setBackground(new java.awt.Color(102, 255, 102));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        BotonAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/AGREGAR.png"))); // NOI18N
+        PanelAdministrador.add(BotonAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 370, -1, -1));
 
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BASURA.png"))); // NOI18N
+        jLabel11.setText("jLabel10");
+        PanelAdministrador.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 220, 160, 150));
 
-        jLabel1.setText("jLabel1");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 50, 40));
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BUSCAR.png"))); // NOI18N
+        jLabel12.setText("jLabel10");
+        PanelAdministrador.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 160, 150));
 
-        jButton1.setText("Ayuda");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/MAS.png"))); // NOI18N
+        jLabel13.setText("jLabel10");
+        PanelAdministrador.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 220, 160, 150));
+
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("--------------------------------------------------------------------------------------------------------------------------------------------------------------");
+        PanelAdministrador.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, -1, -1));
+
+        getContentPane().add(PanelAdministrador, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 10, 630, 430));
+
+        PanelRegistro.setBackground(new java.awt.Color(255, 255, 255));
+        PanelRegistro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Encabezado3.png"))); // NOI18N
+        jLabel4.setText("jLabel4");
+        PanelRegistro.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 90));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/DatosRegistro.png"))); // NOI18N
+        PanelRegistro.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 260, 330));
+
+        BotonRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/REGISTRARSE.png"))); // NOI18N
+        PanelRegistro.add(BotonRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 360, 110, 70));
+        PanelRegistro.add(ContrasenaRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 390, 220, 20));
+        PanelRegistro.add(NombresRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 220, 20));
+        PanelRegistro.add(ApellidosRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, 220, 20));
+        PanelRegistro.add(PaisRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 220, 20));
+        PanelRegistro.add(CelularRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 220, 20));
+        PanelRegistro.add(CorreoRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 220, 20));
+        PanelRegistro.add(FechaNacimientoRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 280, 220, 20));
+        PanelRegistro.add(ContraseñaRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 220, 20));
+
+        getContentPane().add(PanelRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 430));
+
+        PanelInicial.setBackground(new java.awt.Color(0, 51, 255));
+        PanelInicial.setMaximumSize(new java.awt.Dimension(630, 430));
+        PanelInicial.setMinimumSize(new java.awt.Dimension(630, 430));
+        PanelInicial.setPreferredSize(new java.awt.Dimension(630, 430));
+        PanelInicial.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        NoPasaporte.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                NoPasaporteActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 30, 84, -1));
+        PanelInicial.add(NoPasaporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 250, 220, 30));
 
-        jButton2.setText("Mis Viajes");
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, -1, -1));
-
-        jButton3.setText("Notificaciones");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        NombreUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                NombreUsuarioActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 20, 114, -1));
+        PanelInicial.add(NombreUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 190, 220, 30));
+        PanelInicial.add(Contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 310, 220, 30));
 
-        jButton4.setText("My Cuenta");
-        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, -1, -1));
+        Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Encabezado1.png"))); // NOI18N
+        Imagen.setText("jLabel3");
+        PanelInicial.add(Imagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 170, 430));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 60));
+        Imagen1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Usuario.png"))); // NOI18N
+        Imagen1.setText("jLabel4");
+        PanelInicial.add(Imagen1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 30, 120, 120));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 450));
+        jLabel2.setFont(new java.awt.Font("Arial Black", 3, 12)); // NOI18N
+        jLabel2.setText("Contraseña:");
+        PanelInicial.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 290, 100, -1));
+
+        jLabel5.setFont(new java.awt.Font("Arial Black", 3, 12)); // NOI18N
+        jLabel5.setText("Nombre Usuario:");
+        PanelInicial.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 170, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("Arial Black", 3, 12)); // NOI18N
+        jLabel6.setText("Pasaporte:");
+        PanelInicial.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 100, -1));
+
+        BotonAdministrador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ADMINISTRADOR.png"))); // NOI18N
+        PanelInicial.add(BotonAdministrador, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 20, 100, 40));
+
+        BotonContinuar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/CONTINUAR.png"))); // NOI18N
+        PanelInicial.add(BotonContinuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 360, 100, 40));
+
+        BotonRegistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/REGISTRARSE.png"))); // NOI18N
+        BotonRegistro.setText("jLabel7");
+        PanelInicial.add(BotonRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, 100, 40));
+
+        getContentPane().add(PanelInicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 430));
+
+        PanelPrincipal.setBackground(new java.awt.Color(0, 153, 255));
+        PanelPrincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Encabezado2.png"))); // NOI18N
+        PanelPrincipal.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 70));
+        PanelPrincipal.add(BotonMiCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 110, 50));
+        PanelPrincipal.add(BotonMisViajes, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 110, 40));
+
+        BotonNotificaciones.setText("jLabel1");
+        PanelPrincipal.add(BotonNotificaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 10, 40, 50));
+        PanelPrincipal.add(BotonAyuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 10, 110, 50));
+
+        getContentPane().add(PanelPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 430));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void NoPasaporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NoPasaporteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_NoPasaporteActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void NombreUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreUsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_NombreUsuarioActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void ContraseñaAdmiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContraseñaAdmiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_ContraseñaAdmiActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void UsuarioAdmiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsuarioAdmiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_UsuarioAdmiActionPerformed
 
     /**
      * @param args the command line arguments
@@ -163,18 +278,49 @@ public class VistaInicial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JTextField ApellidosRegistro;
+    private javax.swing.JLabel BotonAdministrador;
+    private javax.swing.JLabel BotonAgregar;
+    private javax.swing.JLabel BotonAyuda;
+    private javax.swing.JLabel BotonConsultar;
+    private javax.swing.JLabel BotonContinuar;
+    private javax.swing.JLabel BotonContinuarAdmi;
+    private javax.swing.JLabel BotonEliminar;
+    private javax.swing.JLabel BotonMiCuenta;
+    private javax.swing.JLabel BotonMisViajes;
+    private javax.swing.JLabel BotonNotificaciones;
+    private javax.swing.JLabel BotonRegistrar;
+    private javax.swing.JLabel BotonRegistro;
+    private javax.swing.JTextField CelularRegistro;
+    private javax.swing.JTextField ContrasenaRegistro;
+    private javax.swing.JPasswordField Contraseña;
+    private javax.swing.JTextField ContraseñaAdmi;
+    private javax.swing.JTextField ContraseñaRegistro;
+    private javax.swing.JTextField CorreoRegistro;
+    private javax.swing.JTextField FechaNacimientoRegistro;
+    private javax.swing.JLabel Imagen;
+    private javax.swing.JLabel Imagen1;
+    private javax.swing.JTextField NoPasaporte;
+    private javax.swing.JTextField NombreUsuario;
+    private javax.swing.JTextField NombresRegistro;
+    private javax.swing.JTextField PaisRegistro;
+    private javax.swing.JPanel PanelAdministrador;
+    private javax.swing.JPanel PanelInicial;
+    private javax.swing.JPanel PanelPrincipal;
+    private javax.swing.JPanel PanelRegistro;
+    private javax.swing.JTextField UsuarioAdmi;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
 }
