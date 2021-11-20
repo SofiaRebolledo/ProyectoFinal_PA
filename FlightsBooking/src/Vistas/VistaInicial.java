@@ -386,7 +386,7 @@ public class VistaInicial extends javax.swing.JFrame {
         PanelInternoModificarDatos.setBackground(new java.awt.Color(51, 51, 255));
         PanelInternoModificarDatos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nombres", "Apellidos", "Celular", "Correo" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nombres", "Apellidos", "Celular", "Correo", "Contraseña" }));
         PanelInternoModificarDatos.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, -1));
 
         jLabel36.setFont(new java.awt.Font("Arial Black", 3, 12)); // NOI18N
