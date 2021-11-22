@@ -194,8 +194,6 @@ public class VistaInicial extends javax.swing.JFrame {
         jLabel24 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel25 = new javax.swing.JLabel();
-        CalendarVuelta = new com.toedter.calendar.JDateChooser();
-        CalendarSalida1 = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -595,8 +593,6 @@ public class VistaInicial extends javax.swing.JFrame {
 
         jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BuscarVuelos.png"))); // NOI18N
         PanelPrincipal.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 330, -1, -1));
-        PanelPrincipal.add(CalendarVuelta, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 340, -1, -1));
-        PanelPrincipal.add(CalendarSalida1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 340, -1, -1));
 
         getContentPane().add(PanelPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 430));
 
@@ -678,8 +674,6 @@ public class VistaInicial extends javax.swing.JFrame {
     private javax.swing.JLabel BotonSalir1;
     private javax.swing.JLabel BotonSalir2;
     private javax.swing.JLabel BotonSalir3;
-    private com.toedter.calendar.JDateChooser CalendarSalida1;
-    private com.toedter.calendar.JDateChooser CalendarVuelta;
     private javax.swing.JTextField CelularRegistro;
     private javax.swing.JTextField ContrasenaRegistro;
     private javax.swing.JPasswordField Contraseña;

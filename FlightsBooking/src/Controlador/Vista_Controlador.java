@@ -1,18 +1,21 @@
 package Controlador;
 
 import Modelo.Conexion;
-import Vistas.VistaInicial;
+import Modelo.Usuario;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.math.BigInteger;
 
-public class VistaInicialControlador implements ActionListener{
+public class Vista_Controlador implements ActionListener{
     
     Conexion conectar = new Conexion();
-    VistaInicial vista = new VistaInicial();
+    Usuario user = new Usuario();
+//    VistaInicial vista = new VistaInicial();
 
-    public VistaInicialControlador() {
+    public Vista_Controlador() {
         conectar.conectar();
-        vista.setVisible(true);
+//        user.ModificarDatos("PSR7205E", "Juan", 0);
+//        vista.setVisible(true);
 //        vista.getjPanEmp().setVisible(false);
 //        vista.getjPanPer().setVisible(false);
 //        vista.getjBtnCompEqu().addActionListener(this);
