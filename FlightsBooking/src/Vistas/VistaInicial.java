@@ -11,6 +11,14 @@ public class VistaInicial extends javax.swing.JFrame {
         this.setSize(new Dimension(645, 465));
     }
 
+    public JPanel getPanelConfirmacionProcesoVuelo() {
+        return PanelConfirmacionProcesoVuelo;
+    }
+
+    public JPanel getPanelBusquedaVuelos() {
+        return PanelBusquedaVuelos;
+    }
+
     public JPanel getPanelMisViajes() {
         return PanelMisViajes;
     }
@@ -116,7 +124,7 @@ public class VistaInicial extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         PanelPrincipal = new javax.swing.JPanel();
         PanelBusquedaVuelos = new javax.swing.JPanel();
-        ConfirmacionProcesoVuelo = new javax.swing.JPanel();
+        PanelConfirmacionProcesoVuelo = new javax.swing.JPanel();
         LetreroReserva = new javax.swing.JLabel();
         LetreroCompra = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
@@ -353,15 +361,15 @@ public class VistaInicial extends javax.swing.JFrame {
         PanelBusquedaVuelos.setBackground(new java.awt.Color(0, 153, 255));
         PanelBusquedaVuelos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        ConfirmacionProcesoVuelo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PanelConfirmacionProcesoVuelo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         LetreroReserva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ReservaExitosa.png"))); // NOI18N
-        ConfirmacionProcesoVuelo.add(LetreroReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 60));
+        PanelConfirmacionProcesoVuelo.add(LetreroReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 60));
 
         LetreroCompra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/CompraExitosa.png"))); // NOI18N
-        ConfirmacionProcesoVuelo.add(LetreroCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 60));
+        PanelConfirmacionProcesoVuelo.add(LetreroCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 60));
 
-        PanelBusquedaVuelos.add(ConfirmacionProcesoVuelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, 360, 60));
+        PanelBusquedaVuelos.add(PanelConfirmacionProcesoVuelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, 360, 60));
 
         jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Encabezado10.png"))); // NOI18N
         PanelBusquedaVuelos.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, -1));
@@ -673,7 +681,6 @@ public class VistaInicial extends javax.swing.JFrame {
     private com.toedter.calendar.JDateChooser CalendarSalida1;
     private com.toedter.calendar.JDateChooser CalendarVuelta;
     private javax.swing.JTextField CelularRegistro;
-    private javax.swing.JPanel ConfirmacionProcesoVuelo;
     private javax.swing.JTextField ContrasenaRegistro;
     private javax.swing.JPasswordField Contraseña;
     private javax.swing.JPasswordField Contraseña1;
@@ -706,6 +713,7 @@ public class VistaInicial extends javax.swing.JFrame {
     private javax.swing.JPanel PanelAdministrador;
     private javax.swing.JPanel PanelAyuda;
     private javax.swing.JPanel PanelBusquedaVuelos;
+    private javax.swing.JPanel PanelConfirmacionProcesoVuelo;
     private javax.swing.JPanel PanelCuenta;
     private javax.swing.JPanel PanelInicial;
     private javax.swing.JPanel PanelInternoModificarDatos;
