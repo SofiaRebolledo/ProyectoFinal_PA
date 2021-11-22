@@ -2,10 +2,9 @@ package Controlador;
 
 import Modelo.Conexion;
 import Modelo.Usuario;
-import Vistas.VistaInicial;
+import Vista.VistaInicial;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.math.BigInteger;
 
 public class Vista_Controlador implements ActionListener{
     
@@ -15,17 +14,20 @@ public class Vista_Controlador implements ActionListener{
 
     public Vista_Controlador() {
         conectar.conectar();
-//        user.ModificarDatos("PSR7205E", "Juan", 0);
-//        vista.setVisible(true);
-//        vista.getjPanEmp().setVisible(false);
-//        vista.getjPanPer().setVisible(false);
-//        vista.getjBtnCompEqu().addActionListener(this);
-//        vista.getjBtnConInv().addActionListener(this);
-//        vista.getjBtnRegEmp().addActionListener(this);
-//        vista.getjBtnRegPer().addActionListener(this);
-//        vista.getjBtnSal().addActionListener(this);
-//        vista.getjBtnGuarPers().addActionListener(this);
-//        vista.getjBtnGuarEmp().addActionListener(this);
+        vista.setVisible(true);
+        vista.getPanelAdministrador().setVisible(false);
+        vista.getPanelAyuda().setVisible(false);
+        vista.getPanelBusquedaVuelos().setVisible(false);
+        vista.getPanelConfirmacionProcesoVuelo().setVisible(false);
+        vista.getPanelCuenta().setVisible(false);
+        vista.getPanelInicial().setVisible(true);
+        vista.getPanelInternoModificarDatos().setVisible(false);
+        vista.getPanelMisViajes().setVisible(false);
+        vista.getPanelModificarDatos().setVisible(false);
+        vista.getPanelMostrarAdministrador().setVisible(false);
+        vista.getPanelNotificacion().setVisible(false);
+        vista.getPanelPrincipal().setVisible(false);
+        vista.getPanelRegistro().setVisible(false);
     }
     
     @Override
