@@ -17,7 +17,10 @@ public class Main {
         Vista.getPanelAyuda().setVisible(false);
         Vista.getPanelNotificacion().setVisible(false);
         Vista.getPanelCuenta().setVisible(false);
-        Vista.getPanelModificarDatos().setVisible(true);
+        Vista.getPanelModificarDatos().setVisible(false);
         Vista.getPanelInternoModificarDatos().setVisible(false);
+        Vista.getPanelMisViajes().setVisible(false);
+        Vista.getPanelConfirmacionProcesoVuelo().setVisible(true);
+        Vista.getPanelBusquedaVuelos().setVisible(true);
     }
 }
