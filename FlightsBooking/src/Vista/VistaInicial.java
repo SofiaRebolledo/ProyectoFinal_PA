@@ -501,6 +501,14 @@ public class VistaInicial extends javax.swing.JFrame {
     private void initComponents() {
 
         PanelPrincipal = new javax.swing.JPanel();
+        PanelCuenta = new javax.swing.JPanel();
+        jLabel35 = new javax.swing.JLabel();
+        LabelCorreoCuenta = new javax.swing.JLabel();
+        LabelNombreCuenta = new javax.swing.JLabel();
+        LabelApellidosCuenta = new javax.swing.JLabel();
+        LabelPasaporteCuenta = new javax.swing.JLabel();
+        LabelFechaNacimientoCuenta = new javax.swing.JLabel();
+        BotonModificarDatos = new javax.swing.JLabel();
         PanelBusquedaVuelos = new javax.swing.JPanel();
         PanelConfirmacionProcesoVuelo = new javax.swing.JPanel();
         LetreroReserva = new javax.swing.JLabel();
@@ -541,14 +549,6 @@ public class VistaInicial extends javax.swing.JFrame {
         jLabel32 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
-        PanelCuenta = new javax.swing.JPanel();
-        jLabel35 = new javax.swing.JLabel();
-        LabelCorreoCuenta = new javax.swing.JLabel();
-        LabelNombreCuenta = new javax.swing.JLabel();
-        LabelApellidosCuenta = new javax.swing.JLabel();
-        LabelPasaporteCuenta = new javax.swing.JLabel();
-        LabelFechaNacimientoCuenta = new javax.swing.JLabel();
-        BotonModificarDatos = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         BotonMiCuenta = new javax.swing.JLabel();
         BotonMisViajes = new javax.swing.JLabel();
@@ -625,6 +625,32 @@ public class VistaInicial extends javax.swing.JFrame {
         PanelPrincipal.setBackground(new java.awt.Color(0, 153, 255));
         PanelPrincipal.setMaximumSize(new java.awt.Dimension(630, 430));
         PanelPrincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        PanelCuenta.setBackground(new java.awt.Color(0, 102, 204));
+        PanelCuenta.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Encabezado7.png"))); // NOI18N
+        PanelCuenta.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 150));
+
+        LabelCorreoCuenta.setText("jLabel30");
+        PanelCuenta.add(LabelCorreoCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 120, 150, -1));
+
+        LabelNombreCuenta.setText("jLabel30");
+        PanelCuenta.add(LabelNombreCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 40, 150, -1));
+
+        LabelApellidosCuenta.setText("jLabel30");
+        PanelCuenta.add(LabelApellidosCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, 150, -1));
+
+        LabelPasaporteCuenta.setText("jLabel30");
+        PanelCuenta.add(LabelPasaporteCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, 150, -1));
+
+        LabelFechaNacimientoCuenta.setText("jLabel30");
+        PanelCuenta.add(LabelFechaNacimientoCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 100, 150, -1));
+
+        BotonModificarDatos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/CAMBIARDATOS.png"))); // NOI18N
+        PanelCuenta.add(BotonModificarDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 100, -1, -1));
+
+        PanelPrincipal.add(PanelCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 580, 150));
 
         PanelBusquedaVuelos.setBackground(new java.awt.Color(0, 153, 255));
         PanelBusquedaVuelos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -764,32 +790,6 @@ public class VistaInicial extends javax.swing.JFrame {
         PanelNotificacion.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 50, 310, 60));
 
         PanelPrincipal.add(PanelNotificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 580, 150));
-
-        PanelCuenta.setBackground(new java.awt.Color(0, 102, 204));
-        PanelCuenta.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Encabezado7.png"))); // NOI18N
-        PanelCuenta.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 150));
-
-        LabelCorreoCuenta.setText("jLabel30");
-        PanelCuenta.add(LabelCorreoCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 120, 150, -1));
-
-        LabelNombreCuenta.setText("jLabel30");
-        PanelCuenta.add(LabelNombreCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 40, 150, -1));
-
-        LabelApellidosCuenta.setText("jLabel30");
-        PanelCuenta.add(LabelApellidosCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, 150, -1));
-
-        LabelPasaporteCuenta.setText("jLabel30");
-        PanelCuenta.add(LabelPasaporteCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, 150, -1));
-
-        LabelFechaNacimientoCuenta.setText("jLabel30");
-        PanelCuenta.add(LabelFechaNacimientoCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 100, 150, -1));
-
-        BotonModificarDatos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/CAMBIARDATOS.png"))); // NOI18N
-        PanelCuenta.add(BotonModificarDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 100, -1, -1));
-
-        PanelPrincipal.add(PanelCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 580, 150));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Encabezado2.png"))); // NOI18N
         PanelPrincipal.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 70));

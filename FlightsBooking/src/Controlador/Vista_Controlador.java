@@ -88,6 +88,13 @@ public class Vista_Controlador{
             ingresoUser();
         }
         });
+        vista.getBotonMiCuenta().addMouseListener(new MouseAdapter() {
+        @Override
+        public void mouseClicked(MouseEvent e)  
+        {  
+            miCuenta();
+        }
+        });
     }
     
     public void abrirRegistro(){
@@ -130,12 +137,21 @@ public class Vista_Controlador{
     public void ingresoUser(){
         String Documento = vista.getNoPasaporte().getText();
         String Contrasena = vista.getContraseña().getText();
-        if(user.ingresar(Documento, Contrasena)){
-            vista.getPanelInicial().setVisible(false);
-            vista.getPanelPrincipal().setVisible(true);
-        }else{
+        if(control.espacioVacio(Documento)||control.espacioVacio(Contrasena)){
             JOptionPane.showMessageDialog(vista,"Alguno de tus datos es erroneo, por favor revisa.");
         }
+        else{
+            if(user.ingresar(Documento, Contrasena)){
+                vista.getPanelInicial().setVisible(false);
+                vista.getPanelPrincipal().setVisible(true);
+            }else{
+                JOptionPane.showMessageDialog(vista,"Alguno de tus datos es erroneo, por favor revisa.");
+            }
+        }  
+    }
+    
+    public void miCuenta(){
+        vista.getPanelCuenta().setVisible(true);
     }
     
     public void Salir(){

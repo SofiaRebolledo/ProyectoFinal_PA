@@ -37,6 +37,11 @@ public class Usuario extends Conexion{
         return false;
     }
     
+    public String datoGuardado(String Pasaporte, int Tipo){
+        sql = "SELECT * FROM Usuario where Pasaporte = '"+Pasaporte+"';";
+        return Pasaporte;
+    }
+    
     public void modificarDatos(String Pasaporte, String Dato, int Tipo){
         System.out.println(Tipo);
         sql = "";
