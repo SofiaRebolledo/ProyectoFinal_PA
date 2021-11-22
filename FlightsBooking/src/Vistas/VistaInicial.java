@@ -11,6 +11,10 @@ public class VistaInicial extends javax.swing.JFrame {
         this.setSize(new Dimension(645, 465));
     }
 
+    public JPanel getPanelMisViajes() {
+        return PanelMisViajes;
+    }
+
     public JPanel getPanelInternoModificarDatos() {
         return PanelInternoModificarDatos;
     }
@@ -111,6 +115,18 @@ public class VistaInicial extends javax.swing.JFrame {
         BotonRegresar = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         PanelPrincipal = new javax.swing.JPanel();
+        PanelBusquedaVuelos = new javax.swing.JPanel();
+        ConfirmacionProcesoVuelo = new javax.swing.JPanel();
+        LetreroReserva = new javax.swing.JLabel();
+        LetreroCompra = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        BotonComprar = new javax.swing.JLabel();
+        BotonReservar = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        Opcion1 = new javax.swing.JLabel();
+        Opcion2 = new javax.swing.JLabel();
+        Opcion3 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
         PanelMisViajes = new javax.swing.JPanel();
         jLabel38 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
@@ -170,6 +186,8 @@ public class VistaInicial extends javax.swing.JFrame {
         jLabel24 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel25 = new javax.swing.JLabel();
+        CalendarVuelta = new com.toedter.calendar.JDateChooser();
+        CalendarSalida1 = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -332,6 +350,43 @@ public class VistaInicial extends javax.swing.JFrame {
         PanelPrincipal.setMaximumSize(new java.awt.Dimension(630, 430));
         PanelPrincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        PanelBusquedaVuelos.setBackground(new java.awt.Color(0, 153, 255));
+        PanelBusquedaVuelos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ConfirmacionProcesoVuelo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        LetreroReserva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ReservaExitosa.png"))); // NOI18N
+        ConfirmacionProcesoVuelo.add(LetreroReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 60));
+
+        LetreroCompra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/CompraExitosa.png"))); // NOI18N
+        ConfirmacionProcesoVuelo.add(LetreroCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 60));
+
+        PanelBusquedaVuelos.add(ConfirmacionProcesoVuelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, 360, 60));
+
+        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Encabezado10.png"))); // NOI18N
+        PanelBusquedaVuelos.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, -1));
+        PanelBusquedaVuelos.add(BotonComprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 100, 30));
+        PanelBusquedaVuelos.add(BotonReservar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 90, 30));
+
+        jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/VuelosDisponibles.png"))); // NOI18N
+        jLabel39.setText("jLabel39");
+        PanelBusquedaVuelos.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 210, 320));
+
+        Opcion1.setText("jLabel43");
+        PanelBusquedaVuelos.add(Opcion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 360, 40));
+
+        Opcion2.setText("jLabel43");
+        PanelBusquedaVuelos.add(Opcion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, 360, 40));
+
+        Opcion3.setText("jLabel43");
+        PanelBusquedaVuelos.add(Opcion3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, 350, 40));
+
+        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Encabezado11.png"))); // NOI18N
+        jLabel43.setText("jLabel43");
+        PanelBusquedaVuelos.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, 360, 60));
+
+        PanelPrincipal.add(PanelBusquedaVuelos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 430));
+
         PanelMisViajes.setBackground(new java.awt.Color(0, 153, 204));
         PanelMisViajes.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -474,7 +529,6 @@ public class VistaInicial extends javax.swing.JFrame {
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FotoViaje.png"))); // NOI18N
         PanelPrincipal.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 580, 150));
-        jLabel14.getAccessibleContext().setAccessibleName("");
 
         jRadioButton1.setBackground(new java.awt.Color(255, 153, 51));
         jRadioButton1.setText("Solo Ida");
@@ -520,7 +574,7 @@ public class VistaInicial extends javax.swing.JFrame {
 
         jLabel22.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel22.setText("SALIDA");
-        PanelPrincipal.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, -1, 10));
+        PanelPrincipal.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, -1, 10));
 
         jLabel23.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel23.setText("CUANDO VIAJAS?");
@@ -528,11 +582,13 @@ public class VistaInicial extends javax.swing.JFrame {
 
         jLabel24.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel24.setText("VUELTA");
-        PanelPrincipal.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 330, -1, 10));
+        PanelPrincipal.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 320, -1, 10));
         PanelPrincipal.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 340, 100, -1));
 
         jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BuscarVuelos.png"))); // NOI18N
         PanelPrincipal.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 330, -1, -1));
+        PanelPrincipal.add(CalendarVuelta, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 340, -1, -1));
+        PanelPrincipal.add(CalendarSalida1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 340, -1, -1));
 
         getContentPane().add(PanelPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 430));
 
@@ -595,6 +651,7 @@ public class VistaInicial extends javax.swing.JFrame {
     private javax.swing.JLabel BotonAdministrador;
     private javax.swing.JLabel BotonAgregar;
     private javax.swing.JLabel BotonAyuda;
+    private javax.swing.JLabel BotonComprar;
     private javax.swing.JLabel BotonConsultar;
     private javax.swing.JLabel BotonContinuar;
     private javax.swing.JLabel BotonContinuar1;
@@ -608,11 +665,15 @@ public class VistaInicial extends javax.swing.JFrame {
     private javax.swing.JLabel BotonRegistro;
     private javax.swing.JLabel BotonRegresar;
     private javax.swing.JLabel BotonRegresarModificarDatos;
+    private javax.swing.JLabel BotonReservar;
     private javax.swing.JLabel BotonSalir;
     private javax.swing.JLabel BotonSalir1;
     private javax.swing.JLabel BotonSalir2;
     private javax.swing.JLabel BotonSalir3;
+    private com.toedter.calendar.JDateChooser CalendarSalida1;
+    private com.toedter.calendar.JDateChooser CalendarVuelta;
     private javax.swing.JTextField CelularRegistro;
+    private javax.swing.JPanel ConfirmacionProcesoVuelo;
     private javax.swing.JTextField ContrasenaRegistro;
     private javax.swing.JPasswordField Contraseña;
     private javax.swing.JPasswordField Contraseña1;
@@ -632,13 +693,19 @@ public class VistaInicial extends javax.swing.JFrame {
     private javax.swing.JLabel LabelNumeroNotificaciones;
     private javax.swing.JLabel LabelNumeroViajes;
     private javax.swing.JLabel LabelPasaporteCuenta;
+    private javax.swing.JLabel LetreroCompra;
+    private javax.swing.JLabel LetreroReserva;
     private javax.swing.JTextField NoPasaporte;
     private javax.swing.JTextField NoPasaporte1;
     private javax.swing.JTextField NombresRegistro;
     private javax.swing.JTextField NuevoDato;
+    private javax.swing.JLabel Opcion1;
+    private javax.swing.JLabel Opcion2;
+    private javax.swing.JLabel Opcion3;
     private javax.swing.JTextField PaisRegistro;
     private javax.swing.JPanel PanelAdministrador;
     private javax.swing.JPanel PanelAyuda;
+    private javax.swing.JPanel PanelBusquedaVuelos;
     private javax.swing.JPanel PanelCuenta;
     private javax.swing.JPanel PanelInicial;
     private javax.swing.JPanel PanelInternoModificarDatos;
@@ -685,9 +752,12 @@ public class VistaInicial extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
