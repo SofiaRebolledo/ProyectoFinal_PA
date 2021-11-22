@@ -2,6 +2,7 @@ package Controlador;
 
 import Modelo.Conexion;
 import Modelo.Usuario;
+import Vistas.VistaInicial;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.math.BigInteger;
@@ -10,7 +11,7 @@ public class Vista_Controlador implements ActionListener{
     
     Conexion conectar = new Conexion();
     Usuario user = new Usuario();
-//    VistaInicial vista = new VistaInicial();
+    VistaInicial vista = new VistaInicial();
 
     public Vista_Controlador() {
         conectar.conectar();
