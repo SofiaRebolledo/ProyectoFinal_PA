@@ -81,6 +81,13 @@ public class Vista_Controlador{
             registrarUser();
         }
         });
+        vista.getBotonContinuar().addMouseListener(new MouseAdapter() {
+        @Override
+        public void mouseClicked(MouseEvent e)  
+        {  
+            ingresoUser();
+        }
+        });
     }
     
     public void abrirRegistro(){
@@ -109,46 +116,29 @@ public class Vista_Controlador{
             }
             else{
                 if(control.converFecha(FechaNacimiento)){
-                    user.RegistrarUsuario(Pasaporte, Nombres, Apellidos, Contrasena, Pais, Celular, Correo, Date.valueOf(FechaNacimiento));
-                    System.out.println("Registrado");
+                    user.registrarUsuario(Pasaporte, Nombres, Apellidos, Contrasena, Pais, Celular, Correo, Date.valueOf(FechaNacimiento));
+                    vista.getPanelRegistro().setVisible(false);
+                    vista.getPanelInicial().setVisible(true);
+                }
+                else{
+                    JOptionPane.showMessageDialog(vista,"Alguno de tus datos es erroneo, por favor revisa.");
                 }
             }
+        }
+    }
+    
+    public void ingresoUser(){
+        String Documento = vista.getNoPasaporte().getText();
+        String Contrasena = vista.getContraseña().getText();
+        if(user.ingresar(Documento, Contrasena)){
+            vista.getPanelInicial().setVisible(false);
+            vista.getPanelPrincipal().setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(vista,"Alguno de tus datos es erroneo, por favor revisa.");
         }
     }
     
     public void Salir(){
         System.exit(0);
     }
-   
-//        if(ae.getSource() == vista.getBotonSalir() || ae.getSource() == vista.getBotonSalir1() ||
-//                ae.getSource() == vista.getBotonSalir2() || ae.getSource() == vista.getBotonSalir3()){
-//            System.exit(0);
-//        }
-//        if(ae.getSource()==vista.getjBtnConInv()){
-//            
-//        }
-//        if(ae.getSource()==vista.getjBtnRegEmp()){
-//            vista.getjPanEmp().setVisible(true);
-//            vista.getjPanPer().setVisible(false);
-//            vista.getjPanel1().setVisible(false);
-//        }
-//        if(ae.getSource()==vista.getjBtnRegPer()){
-//            vista.getjPanel1().setVisible(false);
-//            vista.getjPanPer().setVisible(true);
-//        }
-//        if(ae.getSource()==vista.getjBtnGuarPers()){
-//            conectar.RegistrarPersona(vista.getjTxtDoc().getText(), vista.getjCmBoxDoc().getSelectedItem().toString(), vista.getjTxtNombres().getText(), vista.getjTxtApellidos().getText(), vista.getjTxtTelPer().getText());
-//            conectar.RegistrarTelPer(vista.getjTxtTelPer().getText(),vista.getjTxtDoc().getText());
-//            vista.getjPanel1().setVisible(true);
-//            vista.getjPanPer().setVisible(false);
-//        }
-//        if(ae.getSource()==vista.getjBtnGuarEmp()){
-//            conectar.RegistrarEmp(vista.getjTxtNIT().getText(), vista.getjTxtRazSoc().getText(), vista.getjTxtDir().getText(), vista.getjTxtTelEmp().getText(), vista.getjTxtEmail().getText());
-//            conectar.RegistrarTelEmp(vista.getjTxtTelEmp().getText());
-//            vista.getjPanel1().setVisible(true);
-//            vista.getjPanEmp().setVisible(false);
-//        }
-//        if(ae.getSource()==vista.getjBtnSal()){
-//            System.exit(0);
-//        }
 }

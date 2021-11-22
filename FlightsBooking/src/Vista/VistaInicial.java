@@ -500,52 +500,6 @@ public class VistaInicial extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        PanelAdministrador = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        ContraseñaAdmi = new javax.swing.JTextField();
-        UsuarioAdmi = new javax.swing.JTextField();
-        BotonContinuarAdmi = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        BotonSalir2 = new javax.swing.JLabel();
-        PanelMostrarAdministrador = new javax.swing.JPanel();
-        PanelOpcionesAdministrador = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        BotonAgregar = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        BotonConsultar = new javax.swing.JLabel();
-        BotonEliminar = new javax.swing.JLabel();
-        PanelRegistro = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        BotonRegistrar = new javax.swing.JLabel();
-        NombresRegistro = new javax.swing.JTextField();
-        ApellidosRegistro = new javax.swing.JTextField();
-        PaisRegistro = new javax.swing.JTextField();
-        CelularRegistro = new javax.swing.JTextField();
-        CorreoRegistro = new javax.swing.JTextField();
-        FechaNacimientoRegistro = new javax.swing.JTextField();
-        ContraseñaRegistro = new javax.swing.JTextField();
-        ContrasenaRegistro = new javax.swing.JTextField();
-        BotonSalir1 = new javax.swing.JLabel();
-        PasaporteRegistro = new javax.swing.JTextField();
-        PanelInicial = new javax.swing.JPanel();
-        NoPasaporte = new javax.swing.JTextField();
-        Contraseña = new javax.swing.JPasswordField();
-        Imagen = new javax.swing.JLabel();
-        Imagen1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        BotonAdministrador = new javax.swing.JLabel();
-        BotonContinuar = new javax.swing.JLabel();
-        BotonRegistro = new javax.swing.JLabel();
-        BotonSalir = new javax.swing.JLabel();
-        PanelAyuda = new javax.swing.JPanel();
-        jLabel27 = new javax.swing.JLabel();
-        BotonRegresar = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
         PanelPrincipal = new javax.swing.JPanel();
         PanelBusquedaVuelos = new javax.swing.JPanel();
         PanelConfirmacionProcesoVuelo = new javax.swing.JPanel();
@@ -618,164 +572,55 @@ public class VistaInicial extends javax.swing.JFrame {
         jLabel24 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel25 = new javax.swing.JLabel();
+        PanelAdministrador = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        ContraseñaAdmi = new javax.swing.JTextField();
+        UsuarioAdmi = new javax.swing.JTextField();
+        BotonContinuarAdmi = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        BotonSalir2 = new javax.swing.JLabel();
+        PanelMostrarAdministrador = new javax.swing.JPanel();
+        PanelOpcionesAdministrador = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        BotonAgregar = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        BotonConsultar = new javax.swing.JLabel();
+        BotonEliminar = new javax.swing.JLabel();
+        PanelRegistro = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        BotonRegistrar = new javax.swing.JLabel();
+        NombresRegistro = new javax.swing.JTextField();
+        ApellidosRegistro = new javax.swing.JTextField();
+        PaisRegistro = new javax.swing.JTextField();
+        CelularRegistro = new javax.swing.JTextField();
+        CorreoRegistro = new javax.swing.JTextField();
+        FechaNacimientoRegistro = new javax.swing.JTextField();
+        ContraseñaRegistro = new javax.swing.JTextField();
+        ContrasenaRegistro = new javax.swing.JTextField();
+        BotonSalir1 = new javax.swing.JLabel();
+        PasaporteRegistro = new javax.swing.JTextField();
+        PanelInicial = new javax.swing.JPanel();
+        NoPasaporte = new javax.swing.JTextField();
+        Contraseña = new javax.swing.JPasswordField();
+        Imagen = new javax.swing.JLabel();
+        Imagen1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        BotonAdministrador = new javax.swing.JLabel();
+        BotonContinuar = new javax.swing.JLabel();
+        BotonRegistro = new javax.swing.JLabel();
+        BotonSalir = new javax.swing.JLabel();
+        PanelAyuda = new javax.swing.JPanel();
+        jLabel27 = new javax.swing.JLabel();
+        BotonRegresar = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        PanelAdministrador.setBackground(new java.awt.Color(0, 0, 102));
-        PanelAdministrador.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Encabezado4.png"))); // NOI18N
-        PanelAdministrador.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 90));
-
-        jLabel8.setFont(new java.awt.Font("Arial Black", 3, 12)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Contraseña:");
-        PanelAdministrador.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
-
-        jLabel9.setFont(new java.awt.Font("Arial Black", 3, 12)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Nombre Usuario:");
-        PanelAdministrador.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
-
-        ContraseñaAdmi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ContraseñaAdmiActionPerformed(evt);
-            }
-        });
-        PanelAdministrador.add(ContraseñaAdmi, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 180, -1));
-
-        UsuarioAdmi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                UsuarioAdmiActionPerformed(evt);
-            }
-        });
-        PanelAdministrador.add(UsuarioAdmi, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 180, -1));
-
-        BotonContinuarAdmi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/CONTINUAR.png"))); // NOI18N
-        PanelAdministrador.add(BotonContinuarAdmi, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 150, -1, -1));
-
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("--------------------------------------------------------------------------------------------------------------------------------------------------------------");
-        PanelAdministrador.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, -1, -1));
-
-        BotonSalir2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salir.png"))); // NOI18N
-        PanelAdministrador.add(BotonSalir2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 370, 40, 40));
-
-        PanelMostrarAdministrador.setBackground(new java.awt.Color(153, 51, 255));
-        PanelMostrarAdministrador.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        PanelAdministrador.add(PanelMostrarAdministrador, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 630, 220));
-
-        PanelOpcionesAdministrador.setBackground(new java.awt.Color(255, 153, 102));
-        PanelOpcionesAdministrador.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BUSCAR.png"))); // NOI18N
-        PanelOpcionesAdministrador.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 160, 150));
-
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/MAS.png"))); // NOI18N
-        PanelOpcionesAdministrador.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, 160, 150));
-
-        BotonAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/AGREGAR.png"))); // NOI18N
-        PanelOpcionesAdministrador.add(BotonAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, -1, -1));
-
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BASURA.png"))); // NOI18N
-        PanelOpcionesAdministrador.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 10, 160, 150));
-
-        BotonConsultar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/CONSULTAR.png"))); // NOI18N
-        PanelOpcionesAdministrador.add(BotonConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, -1, -1));
-
-        BotonEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ELIMINAR.png"))); // NOI18N
-        PanelOpcionesAdministrador.add(BotonEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, -1, -1));
-
-        PanelAdministrador.add(PanelOpcionesAdministrador, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 630, 220));
-
-        getContentPane().add(PanelAdministrador, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 430));
-
-        PanelRegistro.setBackground(new java.awt.Color(255, 255, 255));
-        PanelRegistro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Encabezado3.png"))); // NOI18N
-        jLabel4.setText("jLabel4");
-        PanelRegistro.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 90));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/DatosRegistro.png"))); // NOI18N
-        PanelRegistro.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 260, 330));
-
-        BotonRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/REGISTRARSE.png"))); // NOI18N
-        PanelRegistro.add(BotonRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, 110, 70));
-        PanelRegistro.add(NombresRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 220, 20));
-        PanelRegistro.add(ApellidosRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, 220, 20));
-        PanelRegistro.add(PaisRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 220, 20));
-        PanelRegistro.add(CelularRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 220, 20));
-        PanelRegistro.add(CorreoRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 220, 20));
-        PanelRegistro.add(FechaNacimientoRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 310, 220, 20));
-        PanelRegistro.add(ContraseñaRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, 220, 20));
-        PanelRegistro.add(ContrasenaRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 390, 220, 20));
-
-        BotonSalir1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salir.png"))); // NOI18N
-        PanelRegistro.add(BotonSalir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 360, 40, 40));
-        PanelRegistro.add(PasaporteRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 220, 20));
-
-        getContentPane().add(PanelRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 430));
-
-        PanelInicial.setBackground(new java.awt.Color(0, 51, 255));
-        PanelInicial.setMaximumSize(new java.awt.Dimension(630, 430));
-        PanelInicial.setMinimumSize(new java.awt.Dimension(630, 430));
-        PanelInicial.setPreferredSize(new java.awt.Dimension(630, 430));
-        PanelInicial.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        NoPasaporte.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NoPasaporteActionPerformed(evt);
-            }
-        });
-        PanelInicial.add(NoPasaporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 190, 220, 30));
-        PanelInicial.add(Contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, 220, 30));
-
-        Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Encabezado1.png"))); // NOI18N
-        Imagen.setText("jLabel3");
-        PanelInicial.add(Imagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 170, 430));
-
-        Imagen1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Usuario.png"))); // NOI18N
-        Imagen1.setText("jLabel4");
-        PanelInicial.add(Imagen1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 30, 120, 120));
-
-        jLabel2.setFont(new java.awt.Font("Arial Black", 3, 12)); // NOI18N
-        jLabel2.setText("Contraseña:");
-        PanelInicial.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 250, 100, -1));
-
-        jLabel6.setFont(new java.awt.Font("Arial Black", 3, 12)); // NOI18N
-        jLabel6.setText("Pasaporte:");
-        PanelInicial.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 170, 100, -1));
-
-        BotonAdministrador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ADMINISTRADOR.png"))); // NOI18N
-        PanelInicial.add(BotonAdministrador, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 20, 100, 40));
-
-        BotonContinuar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/CONTINUAR.png"))); // NOI18N
-        PanelInicial.add(BotonContinuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 320, 100, 40));
-
-        BotonRegistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/REGISTRARSE.png"))); // NOI18N
-        BotonRegistro.setText("jLabel7");
-        PanelInicial.add(BotonRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, 100, 40));
-
-        BotonSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salir.png"))); // NOI18N
-        PanelInicial.add(BotonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 380, 40, 40));
-
-        getContentPane().add(PanelInicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 430));
-
-        PanelAyuda.setBackground(new java.awt.Color(0, 153, 255));
-        PanelAyuda.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Encabezado5.png"))); // NOI18N
-        PanelAyuda.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 70));
-
-        BotonRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/REGRESAR.png"))); // NOI18N
-        PanelAyuda.add(BotonRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 70, -1, -1));
-
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/InformaciónAyuda.png"))); // NOI18N
-        PanelAyuda.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 610, 340));
-
-        getContentPane().add(PanelAyuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 430));
 
         PanelPrincipal.setBackground(new java.awt.Color(0, 153, 255));
         PanelPrincipal.setMaximumSize(new java.awt.Dimension(630, 430));
@@ -1020,6 +865,161 @@ public class VistaInicial extends javax.swing.JFrame {
         PanelPrincipal.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 330, -1, -1));
 
         getContentPane().add(PanelPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 430));
+
+        PanelAdministrador.setBackground(new java.awt.Color(0, 0, 102));
+        PanelAdministrador.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Encabezado4.png"))); // NOI18N
+        PanelAdministrador.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 90));
+
+        jLabel8.setFont(new java.awt.Font("Arial Black", 3, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Contraseña:");
+        PanelAdministrador.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
+
+        jLabel9.setFont(new java.awt.Font("Arial Black", 3, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Nombre Usuario:");
+        PanelAdministrador.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
+
+        ContraseñaAdmi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ContraseñaAdmiActionPerformed(evt);
+            }
+        });
+        PanelAdministrador.add(ContraseñaAdmi, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 180, -1));
+
+        UsuarioAdmi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UsuarioAdmiActionPerformed(evt);
+            }
+        });
+        PanelAdministrador.add(UsuarioAdmi, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 180, -1));
+
+        BotonContinuarAdmi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/CONTINUAR.png"))); // NOI18N
+        PanelAdministrador.add(BotonContinuarAdmi, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 150, -1, -1));
+
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("--------------------------------------------------------------------------------------------------------------------------------------------------------------");
+        PanelAdministrador.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, -1, -1));
+
+        BotonSalir2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salir.png"))); // NOI18N
+        PanelAdministrador.add(BotonSalir2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 370, 40, 40));
+
+        PanelMostrarAdministrador.setBackground(new java.awt.Color(153, 51, 255));
+        PanelMostrarAdministrador.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PanelAdministrador.add(PanelMostrarAdministrador, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 630, 220));
+
+        PanelOpcionesAdministrador.setBackground(new java.awt.Color(255, 153, 102));
+        PanelOpcionesAdministrador.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BUSCAR.png"))); // NOI18N
+        PanelOpcionesAdministrador.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 160, 150));
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/MAS.png"))); // NOI18N
+        PanelOpcionesAdministrador.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, 160, 150));
+
+        BotonAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/AGREGAR.png"))); // NOI18N
+        PanelOpcionesAdministrador.add(BotonAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, -1, -1));
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BASURA.png"))); // NOI18N
+        PanelOpcionesAdministrador.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 10, 160, 150));
+
+        BotonConsultar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/CONSULTAR.png"))); // NOI18N
+        PanelOpcionesAdministrador.add(BotonConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, -1, -1));
+
+        BotonEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ELIMINAR.png"))); // NOI18N
+        PanelOpcionesAdministrador.add(BotonEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, -1, -1));
+
+        PanelAdministrador.add(PanelOpcionesAdministrador, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 630, 220));
+
+        getContentPane().add(PanelAdministrador, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 430));
+
+        PanelRegistro.setBackground(new java.awt.Color(255, 255, 255));
+        PanelRegistro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Encabezado3.png"))); // NOI18N
+        jLabel4.setText("jLabel4");
+        PanelRegistro.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 90));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/DatosRegistro.png"))); // NOI18N
+        PanelRegistro.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 260, 330));
+
+        BotonRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/REGISTRARSE.png"))); // NOI18N
+        PanelRegistro.add(BotonRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, 110, 70));
+        PanelRegistro.add(NombresRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 220, 20));
+        PanelRegistro.add(ApellidosRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, 220, 20));
+        PanelRegistro.add(PaisRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 220, 20));
+        PanelRegistro.add(CelularRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 220, 20));
+        PanelRegistro.add(CorreoRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 220, 20));
+        PanelRegistro.add(FechaNacimientoRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 310, 220, 20));
+        PanelRegistro.add(ContraseñaRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, 220, 20));
+        PanelRegistro.add(ContrasenaRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 390, 220, 20));
+
+        BotonSalir1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salir.png"))); // NOI18N
+        PanelRegistro.add(BotonSalir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 360, 40, 40));
+        PanelRegistro.add(PasaporteRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 220, 20));
+
+        getContentPane().add(PanelRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 430));
+
+        PanelInicial.setBackground(new java.awt.Color(0, 51, 255));
+        PanelInicial.setMaximumSize(new java.awt.Dimension(630, 430));
+        PanelInicial.setMinimumSize(new java.awt.Dimension(630, 430));
+        PanelInicial.setPreferredSize(new java.awt.Dimension(630, 430));
+        PanelInicial.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        NoPasaporte.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NoPasaporteActionPerformed(evt);
+            }
+        });
+        PanelInicial.add(NoPasaporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 190, 220, 30));
+        PanelInicial.add(Contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, 220, 30));
+
+        Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Encabezado1.png"))); // NOI18N
+        Imagen.setText("jLabel3");
+        PanelInicial.add(Imagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 170, 430));
+
+        Imagen1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Usuario.png"))); // NOI18N
+        Imagen1.setText("jLabel4");
+        PanelInicial.add(Imagen1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 30, 120, 120));
+
+        jLabel2.setFont(new java.awt.Font("Arial Black", 3, 12)); // NOI18N
+        jLabel2.setText("Contraseña:");
+        PanelInicial.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 250, 100, -1));
+
+        jLabel6.setFont(new java.awt.Font("Arial Black", 3, 12)); // NOI18N
+        jLabel6.setText("Pasaporte:");
+        PanelInicial.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 170, 100, -1));
+
+        BotonAdministrador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ADMINISTRADOR.png"))); // NOI18N
+        PanelInicial.add(BotonAdministrador, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 20, 100, 40));
+
+        BotonContinuar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/CONTINUAR.png"))); // NOI18N
+        PanelInicial.add(BotonContinuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 320, 100, 40));
+
+        BotonRegistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/REGISTRARSE.png"))); // NOI18N
+        BotonRegistro.setText("jLabel7");
+        PanelInicial.add(BotonRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, 100, 40));
+
+        BotonSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salir.png"))); // NOI18N
+        PanelInicial.add(BotonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 380, 40, 40));
+
+        getContentPane().add(PanelInicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 430));
+
+        PanelAyuda.setBackground(new java.awt.Color(0, 153, 255));
+        PanelAyuda.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Encabezado5.png"))); // NOI18N
+        PanelAyuda.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 70));
+
+        BotonRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/REGRESAR.png"))); // NOI18N
+        PanelAyuda.add(BotonRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 70, -1, -1));
+
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/InformaciónAyuda.png"))); // NOI18N
+        PanelAyuda.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 610, 340));
+
+        getContentPane().add(PanelAyuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 430));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

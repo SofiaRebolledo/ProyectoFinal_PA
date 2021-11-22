@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 public class Usuario extends Conexion{
     
-    public void RegistrarUsuario(String Pasaporte, String Nombre, String Apellido, String Contrasena, String Pais, String Celular, String Correo, Date Fecha_Nacimiento){
+    public void registrarUsuario(String Pasaporte, String Nombre, String Apellido, String Contrasena, String Pais, String Celular, String Correo, Date Fecha_Nacimiento){
         sql = "INSERT INTO Usuario(Pasaporte, Nombre, Apellido, Contrasena, Pais, Celular, Correo, Fecha_Nacimiento)"
                 + "VALUES ('"+Pasaporte+"', '"+Nombre+"', '"+Apellido+"', '"+Contrasena+"', '"+Pais+"', '"+Celular+"', '"+Correo+"', Date '"+Fecha_Nacimiento+"');";
         try {
@@ -18,10 +18,26 @@ public class Usuario extends Conexion{
         } catch (SQLException ex) {
             Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
         }
-        System.out.println("Registradox2");
     }
     
-    public void ModificarDatos(String Pasaporte, String Dato, int Tipo){
+    public boolean ingresar(String Documento, String Contrasena){
+        String Contra = "";
+        sql = "SELECT Contrasena FROM Usuario WHERE Pasaporte = '"+Documento+"';";
+        try {
+            rs = comando.executeQuery(sql);
+            while(rs.next()){
+                Contra = rs.getString("Contrasena");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        if(Contra.equals(Contrasena)){
+            return true;
+        }
+        return false;
+    }
+    
+    public void modificarDatos(String Pasaporte, String Dato, int Tipo){
         System.out.println(Tipo);
         sql = "";
         if(Tipo == 0){
