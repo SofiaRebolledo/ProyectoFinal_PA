@@ -2,7 +2,12 @@
 package Vista;
 
 import java.awt.Dimension;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
 
 public class VistaInicial extends javax.swing.JFrame {
 
@@ -68,6 +73,424 @@ public class VistaInicial extends javax.swing.JFrame {
         return PanelRegistro;
     }
 
+    public JTextField getApellidosRegistro() {
+        return ApellidosRegistro;
+    }
+
+    public JLabel getBotonAdministrador() {
+        return BotonAdministrador;
+    }
+
+    public JLabel getBotonAgregar() {
+        return BotonAgregar;
+    }
+
+    public JLabel getBotonAyuda() {
+        return BotonAyuda;
+    }
+
+    public JLabel getBotonComprar() {
+        return BotonComprar;
+    }
+
+    public JLabel getBotonConsultar() {
+        return BotonConsultar;
+    }
+
+    public JLabel getBotonContinuar() {
+        return BotonContinuar;
+    }
+
+    public JLabel getBotonContinuar1() {
+        return BotonContinuar1;
+    }
+
+    public JLabel getBotonContinuarAdmi() {
+        return BotonContinuarAdmi;
+    }
+
+    public JLabel getBotonEliminar() {
+        return BotonEliminar;
+    }
+
+    public JLabel getBotonMiCuenta() {
+        return BotonMiCuenta;
+    }
+
+    public JLabel getBotonMisViajes() {
+        return BotonMisViajes;
+    }
+
+    public JLabel getBotonModificarDatos() {
+        return BotonModificarDatos;
+    }
+
+    public JLabel getBotonNotificaciones() {
+        return BotonNotificaciones;
+    }
+
+    public JLabel getBotonRegistrar() {
+        return BotonRegistrar;
+    }
+
+    public JLabel getBotonRegistro() {
+        return BotonRegistro;
+    }
+
+    public JLabel getBotonRegresar() {
+        return BotonRegresar;
+    }
+
+    public JLabel getBotonRegresarModificarDatos() {
+        return BotonRegresarModificarDatos;
+    }
+
+    public JLabel getBotonReservar() {
+        return BotonReservar;
+    }
+
+    public JLabel getBotonSalir() {
+        return BotonSalir;
+    }
+
+    public JLabel getBotonSalir1() {
+        return BotonSalir1;
+    }
+
+    public JLabel getBotonSalir2() {
+        return BotonSalir2;
+    }
+
+    public JLabel getBotonSalir3() {
+        return BotonSalir3;
+    }
+
+    public JTextField getCelularRegistro() {
+        return CelularRegistro;
+    }
+
+    public JTextField getContrasenaRegistro() {
+        return ContrasenaRegistro;
+    }
+
+    public JPasswordField getContraseña() {
+        return Contraseña;
+    }
+
+    public JPasswordField getContraseña1() {
+        return Contraseña1;
+    }
+
+    public JTextField getContraseñaAdmi() {
+        return ContraseñaAdmi;
+    }
+
+    public JTextField getContraseñaRegistro() {
+        return ContraseñaRegistro;
+    }
+
+    public JTextField getCorreoRegistro() {
+        return CorreoRegistro;
+    }
+
+    public JTextField getFechaNacimientoRegistro() {
+        return FechaNacimientoRegistro;
+    }
+
+    public JLabel getImagen() {
+        return Imagen;
+    }
+
+    public JLabel getImagen1() {
+        return Imagen1;
+    }
+
+    public JLabel getLabelApellidosCuenta() {
+        return LabelApellidosCuenta;
+    }
+
+    public JLabel getLabelCorreoCuenta() {
+        return LabelCorreoCuenta;
+    }
+
+    public JLabel getLabelDestinosViajes() {
+        return LabelDestinosViajes;
+    }
+
+    public JLabel getLabelFechaNacimientoCuenta() {
+        return LabelFechaNacimientoCuenta;
+    }
+
+    public JLabel getLabelNombreCuenta() {
+        return LabelNombreCuenta;
+    }
+
+    public JLabel getLabelNombreNotificaciones() {
+        return LabelNombreNotificaciones;
+    }
+
+    public JLabel getLabelNombreViajes1() {
+        return LabelNombreViajes1;
+    }
+
+    public JLabel getLabelNumeroNotificaciones() {
+        return LabelNumeroNotificaciones;
+    }
+
+    public JLabel getLabelNumeroViajes() {
+        return LabelNumeroViajes;
+    }
+
+    public JLabel getLabelPasaporteCuenta() {
+        return LabelPasaporteCuenta;
+    }
+
+    public JLabel getLetreroCompra() {
+        return LetreroCompra;
+    }
+
+    public JLabel getLetreroReserva() {
+        return LetreroReserva;
+    }
+
+    public JTextField getNoPasaporte() {
+        return NoPasaporte;
+    }
+
+    public JTextField getNoPasaporte1() {
+        return NoPasaporte1;
+    }
+
+    public JTextField getNombresRegistro() {
+        return NombresRegistro;
+    }
+
+    public JTextField getNuevoDato() {
+        return NuevoDato;
+    }
+
+    public JLabel getOpcion1() {
+        return Opcion1;
+    }
+
+    public JLabel getOpcion2() {
+        return Opcion2;
+    }
+
+    public JLabel getOpcion3() {
+        return Opcion3;
+    }
+
+    public JTextField getPaisRegistro() {
+        return PaisRegistro;
+    }
+
+    public JTextField getUsuarioAdmi() {
+        return UsuarioAdmi;
+    }
+
+    public JComboBox<String> getjComboBox1() {
+        return jComboBox1;
+    }
+
+    public JComboBox<String> getjComboDESDE() {
+        return jComboDESDE;
+    }
+
+    public JComboBox<String> getjComboHACIA() {
+        return jComboHACIA;
+    }
+
+    public JLabel getjLabel1() {
+        return jLabel1;
+    }
+
+    public JLabel getjLabel10() {
+        return jLabel10;
+    }
+
+    public JLabel getjLabel11() {
+        return jLabel11;
+    }
+
+    public JLabel getjLabel12() {
+        return jLabel12;
+    }
+
+    public JLabel getjLabel13() {
+        return jLabel13;
+    }
+
+    public JLabel getjLabel14() {
+        return jLabel14;
+    }
+
+    public JLabel getjLabel15() {
+        return jLabel15;
+    }
+
+    public JLabel getjLabel16() {
+        return jLabel16;
+    }
+
+    public JLabel getjLabel17() {
+        return jLabel17;
+    }
+
+    public JLabel getjLabel18() {
+        return jLabel18;
+    }
+
+    public JLabel getjLabel19() {
+        return jLabel19;
+    }
+
+    public JLabel getjLabel2() {
+        return jLabel2;
+    }
+
+    public JLabel getjLabel20() {
+        return jLabel20;
+    }
+
+    public JLabel getjLabel21() {
+        return jLabel21;
+    }
+
+    public JLabel getjLabel22() {
+        return jLabel22;
+    }
+
+    public JLabel getjLabel23() {
+        return jLabel23;
+    }
+
+    public JLabel getjLabel24() {
+        return jLabel24;
+    }
+
+    public JLabel getjLabel25() {
+        return jLabel25;
+    }
+
+    public JLabel getjLabel26() {
+        return jLabel26;
+    }
+
+    public JLabel getjLabel27() {
+        return jLabel27;
+    }
+
+    public JLabel getjLabel28() {
+        return jLabel28;
+    }
+
+    public JLabel getjLabel29() {
+        return jLabel29;
+    }
+
+    public JLabel getjLabel3() {
+        return jLabel3;
+    }
+
+    public JLabel getjLabel30() {
+        return jLabel30;
+    }
+
+    public JLabel getjLabel31() {
+        return jLabel31;
+    }
+
+    public JLabel getjLabel32() {
+        return jLabel32;
+    }
+
+    public JLabel getjLabel33() {
+        return jLabel33;
+    }
+
+    public JLabel getjLabel34() {
+        return jLabel34;
+    }
+
+    public JLabel getjLabel35() {
+        return jLabel35;
+    }
+
+    public JLabel getjLabel36() {
+        return jLabel36;
+    }
+
+    public JLabel getjLabel37() {
+        return jLabel37;
+    }
+
+    public JLabel getjLabel38() {
+        return jLabel38;
+    }
+
+    public JLabel getjLabel39() {
+        return jLabel39;
+    }
+
+    public JLabel getjLabel4() {
+        return jLabel4;
+    }
+
+    public JLabel getjLabel40() {
+        return jLabel40;
+    }
+
+    public JLabel getjLabel41() {
+        return jLabel41;
+    }
+
+    public JLabel getjLabel42() {
+        return jLabel42;
+    }
+
+    public JLabel getjLabel43() {
+        return jLabel43;
+    }
+
+    public JLabel getjLabel5() {
+        return jLabel5;
+    }
+
+    public JLabel getjLabel6() {
+        return jLabel6;
+    }
+
+    public JLabel getjLabel7() {
+        return jLabel7;
+    }
+
+    public JLabel getjLabel8() {
+        return jLabel8;
+    }
+
+    public JLabel getjLabel9() {
+        return jLabel9;
+    }
+
+    public JRadioButton getjRadioButton1() {
+        return jRadioButton1;
+    }
+
+    public JRadioButton getjRadioButton2() {
+        return jRadioButton2;
+    }
+
+    public JTextField getjTextField1() {
+        return jTextField1;
+    }
+
+    public JTextField getPasaporteRegistro() {
+        return PasaporteRegistro;
+    }
+    
+    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -98,7 +521,6 @@ public class VistaInicial extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         BotonRegistrar = new javax.swing.JLabel();
-        ContrasenaRegistro = new javax.swing.JTextField();
         NombresRegistro = new javax.swing.JTextField();
         ApellidosRegistro = new javax.swing.JTextField();
         PaisRegistro = new javax.swing.JTextField();
@@ -106,7 +528,9 @@ public class VistaInicial extends javax.swing.JFrame {
         CorreoRegistro = new javax.swing.JTextField();
         FechaNacimientoRegistro = new javax.swing.JTextField();
         ContraseñaRegistro = new javax.swing.JTextField();
+        ContrasenaRegistro = new javax.swing.JTextField();
         BotonSalir1 = new javax.swing.JLabel();
+        PasaporteRegistro = new javax.swing.JTextField();
         PanelInicial = new javax.swing.JPanel();
         NoPasaporte = new javax.swing.JTextField();
         Contraseña = new javax.swing.JPasswordField();
@@ -279,17 +703,18 @@ public class VistaInicial extends javax.swing.JFrame {
 
         BotonRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/REGISTRARSE.png"))); // NOI18N
         PanelRegistro.add(BotonRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, 110, 70));
-        PanelRegistro.add(ContrasenaRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 390, 220, 20));
         PanelRegistro.add(NombresRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 220, 20));
         PanelRegistro.add(ApellidosRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, 220, 20));
         PanelRegistro.add(PaisRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 220, 20));
-        PanelRegistro.add(CelularRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 220, 20));
-        PanelRegistro.add(CorreoRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 220, 20));
-        PanelRegistro.add(FechaNacimientoRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 280, 220, 20));
-        PanelRegistro.add(ContraseñaRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 220, 20));
+        PanelRegistro.add(CelularRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 220, 20));
+        PanelRegistro.add(CorreoRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 220, 20));
+        PanelRegistro.add(FechaNacimientoRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 310, 220, 20));
+        PanelRegistro.add(ContraseñaRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, 220, 20));
+        PanelRegistro.add(ContrasenaRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 390, 220, 20));
 
         BotonSalir1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salir.png"))); // NOI18N
         PanelRegistro.add(BotonSalir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 360, 40, 40));
+        PanelRegistro.add(PasaporteRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 220, 20));
 
         getContentPane().add(PanelRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 430));
 
@@ -718,6 +1143,7 @@ public class VistaInicial extends javax.swing.JFrame {
     private javax.swing.JPanel PanelOpcionesAdministrador;
     private javax.swing.JPanel PanelPrincipal;
     private javax.swing.JPanel PanelRegistro;
+    private javax.swing.JTextField PasaporteRegistro;
     private javax.swing.JTextField UsuarioAdmi;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboDESDE;
