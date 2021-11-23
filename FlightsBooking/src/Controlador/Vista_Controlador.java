@@ -1,8 +1,8 @@
 package Controlador;
 
-import Modelo.Conexion;
 import Modelo.ErrorValidacion;
 import Modelo.Usuario;
+import Vista.Admin;
 import Vista.VistaInicial;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -13,6 +13,7 @@ public class Vista_Controlador{
     
     protected Usuario user = new Usuario();
     protected VistaInicial vista = new VistaInicial();
+    protected Admin admin = new Admin();
     protected ErrorValidacion control = new ErrorValidacion();
     protected String Pasaporte = "";
 
@@ -117,6 +118,41 @@ public class Vista_Controlador{
             modificar();
         }
         });
+        vista.getBotonAyuda().addMouseListener(new MouseAdapter() {
+        @Override
+        public void mouseClicked(MouseEvent e)  
+        {  
+            ayuda();
+        }
+        });
+        vista.getBotonRegresar().addMouseListener(new MouseAdapter() {
+        @Override
+        public void mouseClicked(MouseEvent e)  
+        {  
+            regresoAyuda();
+        }
+        });
+        vista.getBotonAdministrador().addMouseListener(new MouseAdapter() {
+        @Override
+        public void mouseClicked(MouseEvent e)  
+        {  
+            vistaAdmin();
+        }
+        });
+        vista.getBotonContinuarAdmi().addMouseListener(new MouseAdapter() {
+        @Override
+        public void mouseClicked(MouseEvent e)  
+        {  
+            ingresoAdmin();
+        }
+        });
+        vista.getBotonConsultar().addMouseListener(new MouseAdapter() {
+        @Override
+        public void mouseClicked(MouseEvent e)  
+        {  
+            adminConsultar();
+        }
+        });
     }
     
     public void abrirRegistro(){
@@ -145,9 +181,22 @@ public class Vista_Controlador{
             }
             else{
                 if(control.converFecha(FechaNacimiento)){
-                    user.registrarUsuario(Pasaporte, Nombres, Apellidos, Contrasena, Pais, Celular, Correo, Date.valueOf(FechaNacimiento));
-                    vista.getPanelRegistro().setVisible(false);
-                    vista.getPanelInicial().setVisible(true);
+                    if(user.registrarUsuario(Pasaporte, Nombres, Apellidos, Contrasena, Pais, Celular, Correo, Date.valueOf(FechaNacimiento))){
+                        vista.getPanelRegistro().setVisible(false);
+                        vista.getPanelInicial().setVisible(true);
+                        vista.getNombresRegistro().setText("");
+                        vista.getApellidosRegistro().setText("");
+                        vista.getPaisRegistro().setText("");
+                        vista.getPasaporteRegistro().setText("");
+                        vista.getCelularRegistro().setText("");
+                        vista.getCorreoRegistro().setText("");
+                        vista.getFechaNacimientoRegistro().setText("");
+                        vista.getContraseñaRegistro().setText("");
+                        vista.getContrasenaRegistro().setText("");
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(vista,"Alguno de tus datos es erroneo, por favor revisa.");
+                    }
                 }
                 else{
                     JOptionPane.showMessageDialog(vista,"Alguno de tus datos es erroneo, por favor revisa.");
@@ -218,12 +267,58 @@ public class Vista_Controlador{
             if(TDato.equals("Contraseña")){
                 TDato = "Contrasena";
             }
-            System.out.println(TDato);
             user.modificarDatos(Pasaporte, NDato, TDato);
             vista.getPanelModificarDatos().setVisible(false);
             vista.getPanelInternoModificarDatos().setVisible(false);
             vista.getPanelPrincipal().setVisible(true);
+            vista.getNuevoDato().setText("");
         }
+    }
+    
+    
+    public void ayuda(){
+        vista.getPanelAyuda().setVisible(true);
+        vista.getPanelPrincipal().setVisible(false);
+    }
+    
+    public void regresoAyuda(){
+        vista.getPanelPrincipal().setVisible(true);
+        vista.getPanelAyuda().setVisible(false);
+    }
+    
+    public void vistaAdmin(){
+        vista.getPanelInicial().setVisible(false);
+        vista.getPanelAdministrador().setVisible(true);
+        vista.getPanelMostrarAdministrador().setVisible(true);
+        vista.getPanelOpcionesAdministrador().setVisible(false);
+    }
+    
+    public void ingresoAdmin(){
+        String Usuario = vista.getUsuarioAdmi().getText();
+        String cont = vista.getContraseñaAdmi().getText();
+        if(control.espacioVacio(cont) || control.espacioVacio(Usuario)){
+            JOptionPane.showMessageDialog(vista,"Alguno de tus datos es erroneo, por favor revisa.");
+        }
+        else{
+            if(user.ingresar(Usuario, cont)){
+                if(Usuario.equals("Admin")){
+                    vista.getPanelMostrarAdministrador().setVisible(false);
+                    vista.getPanelOpcionesAdministrador().setVisible(true);
+                    vista.getUsuarioAdmi().setText("");
+                    vista.getContraseñaAdmi().setText("");
+                }
+                else{
+                    JOptionPane.showMessageDialog(vista,"Alguno de tus datos es erroneo, por favor revisa.");
+                }
+            }
+            else{
+                JOptionPane.showMessageDialog(vista,"Alguno de tus datos es erroneo, por favor revisa.");
+            }
+        }
+    }
+    
+    public void adminConsultar(){
+        
     }
     
     public void Salir(){
