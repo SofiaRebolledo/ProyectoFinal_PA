@@ -592,7 +592,6 @@ public class VistaInicial extends javax.swing.JFrame {
         BotonEliminar = new javax.swing.JLabel();
         PanelRegistro = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         BotonRegistrar = new javax.swing.JLabel();
         NombresRegistro = new javax.swing.JTextField();
         ApellidosRegistro = new javax.swing.JTextField();
@@ -604,6 +603,7 @@ public class VistaInicial extends javax.swing.JFrame {
         ContrasenaRegistro = new javax.swing.JTextField();
         BotonSalir1 = new javax.swing.JLabel();
         PasaporteRegistro = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
         PanelInicial = new javax.swing.JPanel();
         NoPasaporte = new javax.swing.JTextField();
         Contraseña = new javax.swing.JPasswordField();
@@ -953,23 +953,23 @@ public class VistaInicial extends javax.swing.JFrame {
         jLabel4.setText("jLabel4");
         PanelRegistro.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 90));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/DatosRegistro.png"))); // NOI18N
-        PanelRegistro.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 260, 330));
-
         BotonRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/REGISTRARSE.png"))); // NOI18N
         PanelRegistro.add(BotonRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, 110, 70));
-        PanelRegistro.add(NombresRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 220, 20));
-        PanelRegistro.add(ApellidosRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, 220, 20));
-        PanelRegistro.add(PaisRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 220, 20));
-        PanelRegistro.add(CelularRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 220, 20));
-        PanelRegistro.add(CorreoRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 220, 20));
-        PanelRegistro.add(FechaNacimientoRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 310, 220, 20));
-        PanelRegistro.add(ContraseñaRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, 220, 20));
+        PanelRegistro.add(NombresRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, 220, 20));
+        PanelRegistro.add(ApellidosRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 220, 20));
+        PanelRegistro.add(PaisRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, 220, 20));
+        PanelRegistro.add(CelularRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 220, 220, 20));
+        PanelRegistro.add(CorreoRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 220, 20));
+        PanelRegistro.add(FechaNacimientoRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 290, 220, 20));
+        PanelRegistro.add(ContraseñaRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 330, 220, 20));
         PanelRegistro.add(ContrasenaRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 390, 220, 20));
 
         BotonSalir1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salir.png"))); // NOI18N
         PanelRegistro.add(BotonSalir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 360, 40, 40));
-        PanelRegistro.add(PasaporteRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 220, 20));
+        PanelRegistro.add(PasaporteRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 220, 20));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/DatosRegistro.png"))); // NOI18N
+        PanelRegistro.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
 
         getContentPane().add(PanelRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 430));
 
