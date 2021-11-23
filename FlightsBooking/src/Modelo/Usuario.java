@@ -37,32 +37,32 @@ public class Usuario extends Conexion{
         return false;
     }
     
-    public String datoGuardado(String Pasaporte, int Tipo){
+    public String [] datoGuardado(String Pasaporte){
+        String [] Data = new String[7];
         sql = "SELECT * FROM Usuario where Pasaporte = '"+Pasaporte+"';";
-        return Pasaporte;
+        try {
+            rs = comando.executeQuery(sql);
+            while(rs.next()){
+                Data[0] = rs.getString("Nombre");
+                Data[1] = rs.getString("Apellido");
+                Data[2] = rs.getString("Contrasena");
+                Data[3] = rs.getString("Pais");
+                Data[4] = rs.getString("Celular");
+                Data[5] = rs.getString("Correo");
+                Data[6] = rs.getString("Fecha_Nacimiento");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return Data;
     }
     
-    public void modificarDatos(String Pasaporte, String Dato, int Tipo){
-        System.out.println(Tipo);
-        sql = "";
-        if(Tipo == 0){
-            sql = "UPDATE Usuario SET Nombre=? where Pasaporte='"+Pasaporte;
-        }
-        if(Tipo == 1){
-            sql = "UPDATE Usuario SET Apellido=? where Pasaporte='"+Pasaporte;
-        }
-        if(Tipo == 2){
-            sql = "UPDATE Usuario SET Correo=? where Pasaporte='"+Pasaporte;
-        }
-        if(Tipo == 3){
-            sql = "UPDATE Usuario SET Celular=? where Pasaporte='"+Pasaporte;
-        }
-//        try {
-//            PreparedStatement comand = con.prepareStatement(sql);
-//            comand.setString(1, Dato);
-//            comand.executeUpdate();
-//        } catch (SQLException ex) {
-//            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-//        }
+    public void modificarDatos(String Pasaporte, String Dato, String Tipo){
+        sql = "UPDATE Usuario SET "+Tipo+"='"+Dato+"' where Pasaporte='"+Pasaporte+"';";
+        try {
+            comando.executeUpdate(sql);
+        } catch (SQLException ex) {
+            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+        }   
     }
 }

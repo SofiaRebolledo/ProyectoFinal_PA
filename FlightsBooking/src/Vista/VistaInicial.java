@@ -743,7 +743,12 @@ public class VistaInicial extends javax.swing.JFrame {
         PanelInternoModificarDatos.setBackground(new java.awt.Color(51, 51, 255));
         PanelInternoModificarDatos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nombres", "Apellidos", "Celular", "Correo", "Contraseña" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nombre", "Apellido", "Celular", "Correo", "Contraseña" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
         PanelInternoModificarDatos.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, -1));
 
         jLabel36.setFont(new java.awt.Font("Arial Black", 3, 12)); // NOI18N
@@ -1039,6 +1044,10 @@ public class VistaInicial extends javax.swing.JFrame {
     private void NoPasaporte1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NoPasaporte1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_NoPasaporte1ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
      * @param args the command line arguments

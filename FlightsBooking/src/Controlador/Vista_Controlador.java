@@ -11,18 +11,19 @@ import javax.swing.JOptionPane;
 
 public class Vista_Controlador{
     
-    Usuario user = new Usuario();
-    VistaInicial vista = new VistaInicial();
-    ErrorValidacion control = new ErrorValidacion();
+    protected Usuario user = new Usuario();
+    protected VistaInicial vista = new VistaInicial();
+    protected ErrorValidacion control = new ErrorValidacion();
+    protected String Pasaporte = "";
 
     public Vista_Controlador() {
         user.conectar();
         vista.setVisible(true);
-        this.Paneles();
+        this.paneles();
         this.Botones();
     }
     
-    public void Paneles(){
+    public void paneles(){
         vista.getPanelAdministrador().setVisible(false);
         vista.getPanelAyuda().setVisible(false);
         vista.getPanelBusquedaVuelos().setVisible(false);
@@ -95,6 +96,27 @@ public class Vista_Controlador{
             miCuenta();
         }
         });
+        vista.getBotonModificarDatos().addMouseListener(new MouseAdapter() {
+        @Override
+        public void mouseClicked(MouseEvent e)  
+        {  
+            vistaModificarDatos();
+        }
+        });
+        vista.getBotonContinuar1().addMouseListener(new MouseAdapter() {
+        @Override
+        public void mouseClicked(MouseEvent e)  
+        {  
+            confirmaModificarDatos();
+        }
+        });
+        vista.getBotonRegresarModificarDatos().addMouseListener(new MouseAdapter() {
+        @Override
+        public void mouseClicked(MouseEvent e)  
+        {  
+            modificar();
+        }
+        });
     }
     
     public void abrirRegistro(){
@@ -144,14 +166,64 @@ public class Vista_Controlador{
             if(user.ingresar(Documento, Contrasena)){
                 vista.getPanelInicial().setVisible(false);
                 vista.getPanelPrincipal().setVisible(true);
+                Pasaporte = Documento;
+                vista.getNoPasaporte().setText("");
+                vista.getContraseña().setText("");
             }else{
                 JOptionPane.showMessageDialog(vista,"Alguno de tus datos es erroneo, por favor revisa.");
             }
-        }  
+        } 
     }
     
     public void miCuenta(){
+        String [] Data = null;
+        Data = user.datoGuardado(Pasaporte);
+        vista.getLabelNombreCuenta().setText(Data[0]);
+        vista.getLabelApellidosCuenta().setText(Data[1]);
+        vista.getLabelPasaporteCuenta().setText(Pasaporte);
+        vista.getLabelFechaNacimientoCuenta().setText(Data[6]);
+        vista.getLabelCorreoCuenta().setText(Data[5]);
         vista.getPanelCuenta().setVisible(true);
+    }
+    
+    public void vistaModificarDatos(){
+        vista.getPanelModificarDatos().setVisible(true);
+        vista.getPanelCuenta().setVisible(false);
+    }
+    
+    public void confirmaModificarDatos(){
+        String Documento = vista.getNoPasaporte1().getText();
+        String Contrasena = vista.getContraseña1().getText();
+        if(control.espacioVacio(Documento)||control.espacioVacio(Contrasena)){
+            JOptionPane.showMessageDialog(vista,"Alguno de tus datos es erroneo, por favor revisa.");
+        }
+        else{
+            if(user.ingresar(Documento, Contrasena) && Documento.equals(Pasaporte)){
+                vista.getPanelInternoModificarDatos().setVisible(true);
+                vista.getNoPasaporte1().setText("");
+                vista.getContraseña1().setText("");
+            }else{
+                JOptionPane.showMessageDialog(vista,"Alguno de tus datos es erroneo, por favor revisa.");
+            }
+        }
+    }
+    
+    public void modificar(){
+        String TDato = vista.getjComboBox1().getSelectedItem().toString();
+        String NDato = vista.getNuevoDato().getText();
+        if(control.espacioVacio(NDato)){
+            JOptionPane.showMessageDialog(vista,"Alguno de tus datos es erroneo, por favor revisa.");
+        }
+        else{
+            if(TDato.equals("Contraseña")){
+                TDato = "Contrasena";
+            }
+            System.out.println(TDato);
+            user.modificarDatos(Pasaporte, NDato, TDato);
+            vista.getPanelModificarDatos().setVisible(false);
+            vista.getPanelInternoModificarDatos().setVisible(false);
+            vista.getPanelPrincipal().setVisible(true);
+        }
     }
     
     public void Salir(){
