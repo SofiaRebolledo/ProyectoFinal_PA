@@ -153,6 +153,7 @@ public class Vista_Controlador{
             adminConsultar();
         }
         });
+        admin
     }
     
     public void abrirRegistro(){
@@ -318,7 +319,8 @@ public class Vista_Controlador{
     }
     
     public void adminConsultar(){
-        
+        admin.setVisible(true);
+        admin.getPanelConsultas().setVisible(true);
     }
     
     public void Salir(){
