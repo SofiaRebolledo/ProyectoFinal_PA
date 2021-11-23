@@ -3,11 +3,16 @@ package Vista;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 
 public class Admin extends javax.swing.JFrame {
 
     public Admin() {
         initComponents();
+    }
+
+    public JTable getTablaConsul() {
+        return tablaConsul;
     }
 
     public JComboBox<String> getOpcConsul() {
@@ -32,6 +37,8 @@ public class Admin extends javax.swing.JFrame {
         PanelConsultas = new javax.swing.JPanel();
         OpcConsul = new javax.swing.JComboBox<>();
         BtnConsultar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tablaConsul = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -39,6 +46,19 @@ public class Admin extends javax.swing.JFrame {
 
         BtnConsultar.setText("Consultar");
         BtnConsultar.setToolTipText("");
+
+        tablaConsul.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane1.setViewportView(tablaConsul);
 
         javax.swing.GroupLayout PanelConsultasLayout = new javax.swing.GroupLayout(PanelConsultas);
         PanelConsultas.setLayout(PanelConsultasLayout);
@@ -48,6 +68,7 @@ public class Admin extends javax.swing.JFrame {
                 .addComponent(OpcConsul, javax.swing.GroupLayout.PREFERRED_SIZE, 523, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
                 .addComponent(BtnConsultar, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE))
+            .addComponent(jScrollPane1)
         );
         PanelConsultasLayout.setVerticalGroup(
             PanelConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -55,7 +76,8 @@ public class Admin extends javax.swing.JFrame {
                 .addGroup(PanelConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(OpcConsul, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BtnConsultar))
-                .addGap(0, 303, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -111,5 +133,7 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JButton BtnConsultar;
     private javax.swing.JComboBox<String> OpcConsul;
     private javax.swing.JPanel PanelConsultas;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable tablaConsul;
     // End of variables declaration//GEN-END:variables
 }

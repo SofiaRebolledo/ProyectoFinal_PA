@@ -1,13 +1,21 @@
 package Controlador;
 
+import Modelo.Conexion;
 import Modelo.ErrorValidacion;
 import Modelo.Usuario;
 import Vista.Admin;
 import Vista.VistaInicial;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.Date;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 public class Vista_Controlador{
     
@@ -150,10 +158,15 @@ public class Vista_Controlador{
         @Override
         public void mouseClicked(MouseEvent e)  
         {  
-            adminConsultar();
+            adminVistaConsultar();
         }
         });
-        admin
+        admin.getBtnConsultar().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                adminConsultar();
+            }
+        });
     }
     
     public void abrirRegistro(){
@@ -318,9 +331,48 @@ public class Vista_Controlador{
         }
     }
     
-    public void adminConsultar(){
+    public void adminVistaConsultar(){
         admin.setVisible(true);
         admin.getPanelConsultas().setVisible(true);
+    }
+    
+    public void adminConsultar(){
+        ArrayList<Usuario> Usuarios = new ArrayList<Usuario>();
+        String [] Data = new String[8];
+        String opc = admin.getOpcConsul().getSelectedItem().toString();
+        String sql = "SELECT * FROM "+opc+";";
+        if(opc.equals("Usuario")){
+            try {
+                user.setRs(user.getComando().executeQuery(sql));
+                while(user.getRs().next()){
+                    user.setPasaport(user.getRs().getString("Pasaporte"));
+                    user.setNomb(user.getRs().getString("Nombre"));
+                    user.setApell(user.getRs().getString("Apellido"));
+                    user.setContras(user.getRs().getString("Contrasena"));
+                    user.setP(user.getRs().getString("Pais"));
+                    user.setCel(user.getRs().getString("Celular"));
+                    user.setCorr(user.getRs().getString("Correo"));
+                    user.setFecha(user.getRs().getString("Fecha_Nacimiento"));
+                    Usuarios.add(user);
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            int n = 0;
+            sql = "SELECT COUNT(*) FROM "+opc+";";
+            try {
+            user.setRs(user.getComando().executeQuery(sql));
+                while(user.getRs().next()){
+                    n= user.getRs().getRow();
+                    System.out.println(n);
+                }
+                
+            } catch (SQLException ex) {
+                Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            DefaultTableModel model = (DefaultTableModel) admin.getTablaConsul().getModel();
+        }
+        
     }
     
     public void Salir(){
