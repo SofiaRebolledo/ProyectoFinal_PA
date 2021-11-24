@@ -47,14 +47,14 @@ public class Vista_Controlador{
         vista.getPanelBusquedaVuelos().setVisible(false);
         vista.getPanelConfirmacionProcesoVuelo().setVisible(false);
         vista.getPanelCuenta().setVisible(false);
-        vista.getPanelInicial().setVisible(true);
+        vista.getPanelInicial().setVisible(false);
         vista.getPanelInternoModificarDatos().setVisible(false);
         vista.getPanelMisViajes().setVisible(false);
         vista.getPanelModificarDatos().setVisible(false);
         vista.getPanelMostrarAdministrador().setVisible(false);
         vista.getPanelNotificacion().setVisible(false);
         vista.getPanelPrincipal().setVisible(false);
-        vista.getPanelRegistro().setVisible(false);
+        vista.getPanelRegistro().setVisible(true);
     }
    
     public void Botones(){
