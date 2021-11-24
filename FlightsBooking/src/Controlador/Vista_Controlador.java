@@ -694,36 +694,21 @@ public class Vista_Controlador{
                     + "'"+admin.getAdminAddUserApellido().getText()+"','"+admin.getAdminAddUserContrasena().getText()+"',"
                     + "'"+admin.getAdminAddUserPais().getText()+"','"+admin.getAdminAddUserCelular().getText()+"',"
                     + "'"+admin.getAdminAddUserCorreo().getText()+"','"+admin.getAdminAddUserFecha().getText()+"');";
-            admin.getAdminAddUserPasaporte().setText("");
-            admin.getAdminAddUserNombre().setText("");
-            admin.getAdminAddUserApellido().setText("");
-            admin.getAdminAddUserContrasena().setText("");
-            admin.getAdminAddUserPais().setText("");
-            admin.getAdminAddUserCelular().setText("");
-            admin.getAdminAddUserCorreo().setText("");
-            admin.getAdminAddUserFecha().setText("");
         }
         else{
             if(Tabla.equals("Pais") && !control.espacioVacio(admin.getAdminAddPaisIdCodPais().getText())&&!control.espacioVacio(admin.getAdminAddPaisNombre().getText())){
                 data = "(id_Cod_Pais, Nombre) VALUES ('"+admin.getAdminAddPaisIdCodPais().getText()+"', '"+admin.getAdminAddPaisNombre().getText()+"');";
-                admin.getAdminAddPaisIdCodPais().setText("");
-                admin.getAdminAddPaisNombre().setText("");
             }
             else{
                 if(Tabla.equals("Ciudad")&&!control.espacioVacio(admin.getAdminAddCiu_id_Nom_Ciudad().getText())&&!control.espacioVacio(admin.getAdminAddCiuPais().getText())){
                     data = "(id_Nom_Ciudad, Pais) VALUES ('"+admin.getAdminAddCiu_id_Nom_Ciudad().getText()+"','"+admin.getAdminAddCiuPais().getText()+"');";
-                    admin.getAdminAddCiu_id_Nom_Ciudad().setText("");
-                    admin.getAdminAddCiuPais().setText("");
                 }
                 else{
                     if(Tabla.equals("Aeropuerto")&&!control.espacioVacio(admin.getAdminAddAeridNomAer().getText())&&!control.espacioVacio(admin.getAdminAddAerSiglas().getText())&&
                             !control.espacioVacio(admin.getAdminAddAerCiudad().getText())){
                         data = "(id_Nom_Aeropuerto, Siglas, Ciudad) VALUES ('"+admin.getAdminAddAeridNomAer().getText()+"', '"+admin.getAdminAddAerSiglas().getText()+"',"
                                 + "'"+admin.getAdminAddAerCiudad().getText()+"');";
-                        admin.getAdminAddAeridNomAer().setText("");
-                        admin.getAdminAddAerSiglas().setText("");
-                        admin.getAdminAddAerCiudad().setText("");
-                    }
+                        }
                     else{
                         if(Tabla.equals("Vuelo")&& !control.espacioVacio(admin.getAdminAddVueloIdVuelo().getText()) && !control.espacioVacio(admin.getAdminAddVueloIdUser().getText()) &&
                                 !control.espacioVacio(admin.getAdminAddVueloAerOri().getText()) && !control.espacioVacio(admin.getAdminAddVueloAerDest().getText()) && !control.espacioVacio(admin.getAdminAddVueloHoraP().getText())&&
@@ -733,15 +718,6 @@ public class Vista_Controlador{
                                     + "('"+admin.getAdminAddVueloIdVuelo().getText()+"', '"+admin.getAdminAddVueloIdUser().getText()+"', '"+admin.getAdminAddVueloAerOri().getText()+"',"
                                     + "'"+admin.getAdminAddVueloAerDest().getText()+"','"+admin.getAdminAddVueloHoraP().getText()+"','"+admin.getAdminAddVueloHoraLL().getText()+"',"
                                     + "'"+admin.getAdminAddVueloDistancia().getText()+"','"+admin.getAdminAddVueloDura().getText()+"','"+admin.getAdminAddVueloCosto().getText()+"');";
-                            admin.getAdminAddVueloIdVuelo().setText("");
-                            admin.getAdminAddVueloIdUser().setText("");
-                            admin.getAdminAddVueloAerOri().setText("");
-                            admin.getAdminAddVueloAerDest().setText("");
-                            admin.getAdminAddVueloHoraP().setText("");
-                            admin.getAdminAddVueloHoraLL().setText("");
-                            admin.getAdminAddVueloDistancia().setText("");
-                            admin.getAdminAddVueloDura().setText("");
-                            admin.getAdminAddVueloCosto().setText("");
                         }
                         else{
                             JOptionPane.showMessageDialog(null,"Alguno de tus datos es erroneo, por favor revisa.");
@@ -754,9 +730,33 @@ public class Vista_Controlador{
         try {
             conectar.getComando().executeUpdate(sql);
             JOptionPane.showMessageDialog(null,"Registro Exitoso!");
+            admin.getAdminAddUserPasaporte().setText("");
+            admin.getAdminAddUserNombre().setText("");
+            admin.getAdminAddUserApellido().setText("");
+            admin.getAdminAddUserContrasena().setText("");
+            admin.getAdminAddUserPais().setText("");
+            admin.getAdminAddUserCelular().setText("");
+            admin.getAdminAddUserCorreo().setText("");
+            admin.getAdminAddUserFecha().setText("");
+            admin.getAdminAddPaisIdCodPais().setText("");
+            admin.getAdminAddPaisNombre().setText("");
+            admin.getAdminAddCiu_id_Nom_Ciudad().setText("");
+            admin.getAdminAddCiuPais().setText("");
+            admin.getAdminAddAeridNomAer().setText("");
+            admin.getAdminAddAerSiglas().setText("");
+            admin.getAdminAddAerCiudad().setText("");
+            admin.getAdminAddVueloIdVuelo().setText("");
+            admin.getAdminAddVueloIdUser().setText("");
+            admin.getAdminAddVueloAerOri().setText("");
+            admin.getAdminAddVueloAerDest().setText("");
+            admin.getAdminAddVueloHoraP().setText("");
+            admin.getAdminAddVueloHoraLL().setText("");
+            admin.getAdminAddVueloDistancia().setText("");
+            admin.getAdminAddVueloDura().setText("");
+            admin.getAdminAddVueloCosto().setText("");
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null,"Alguno de tus datos es erroneo, por favor revisa.");
-        }
+        }        
     }
     
     public void Salir(){
