@@ -1,8 +1,12 @@
 package Controlador;
 
+import Modelo.Aeropuerto;
+import Modelo.Ciudad;
 import Modelo.Conexion;
 import Modelo.ErrorValidacion;
+import Modelo.Pais;
 import Modelo.Usuario;
+import Modelo.Vuelo;
 import Vista.Admin;
 import Vista.VistaInicial;
 import java.awt.event.ActionEvent;
@@ -20,6 +24,11 @@ import javax.swing.table.DefaultTableModel;
 public class Vista_Controlador{
     
     protected Usuario user = new Usuario();
+    protected Conexion conectar = user;
+    protected Pais pais = new Pais();
+    protected Ciudad ciudad = new Ciudad();
+    protected Aeropuerto aer = new Aeropuerto();
+    protected Vuelo vuelo = new Vuelo();
     protected VistaInicial vista = new VistaInicial();
     protected Admin admin = new Admin();
     protected ErrorValidacion control = new ErrorValidacion();
@@ -334,43 +343,229 @@ public class Vista_Controlador{
     public void adminVistaConsultar(){
         admin.setVisible(true);
         admin.getPanelConsultas().setVisible(true);
+        admin.getPanelConsulUsuarios().setVisible(false);
+        admin.getPanelConsulPais().setVisible(false);
+        admin.getPanelConsulCiudad().setVisible(false);
     }
     
     public void adminConsultar(){
-        ArrayList<Usuario> Usuarios = new ArrayList<Usuario>();
-        String [] Data = new String[8];
         String opc = admin.getOpcConsul().getSelectedItem().toString();
         String sql = "SELECT * FROM "+opc+";";
         if(opc.equals("Usuario")){
+            ArrayList<Usuario> Usuarios = new ArrayList<Usuario>();
             try {
-                user.setRs(user.getComando().executeQuery(sql));
-                while(user.getRs().next()){
-                    user.setPasaport(user.getRs().getString("Pasaporte"));
-                    user.setNomb(user.getRs().getString("Nombre"));
-                    user.setApell(user.getRs().getString("Apellido"));
-                    user.setContras(user.getRs().getString("Contrasena"));
-                    user.setP(user.getRs().getString("Pais"));
-                    user.setCel(user.getRs().getString("Celular"));
-                    user.setCorr(user.getRs().getString("Correo"));
-                    user.setFecha(user.getRs().getString("Fecha_Nacimiento"));
+                conectar.setRs(conectar.getComando().executeQuery(sql));
+                while(conectar.getRs().next()){
+                    user.setPasaport(conectar.getRs().getString("Pasaporte"));
+                    user.setNomb(conectar.getRs().getString("Nombre"));
+                    user.setApell(conectar.getRs().getString("Apellido"));
+                    user.setContras(conectar.getRs().getString("Contrasena"));
+                    user.setP(conectar.getRs().getString("Pais"));
+                    user.setCel(conectar.getRs().getString("Celular"));
+                    user.setCorr(conectar.getRs().getString("Correo"));
+                    user.setFecha(conectar.getRs().getString("Fecha_Nacimiento"));
                     Usuarios.add(user);
+                    user = new Usuario();
                 }
             } catch (SQLException ex) {
                 Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
             }
-            int n = 0;
             sql = "SELECT COUNT(*) FROM "+opc+";";
             try {
-            user.setRs(user.getComando().executeQuery(sql));
-                while(user.getRs().next()){
-                    n= user.getRs().getRow();
-                    System.out.println(n);
+            conectar.setRs(conectar.getComando().executeQuery(sql));
+                while(conectar.getRs().next()){
+                    Usuarios.add(user);
                 }
                 
             } catch (SQLException ex) {
                 Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
             }
             DefaultTableModel model = (DefaultTableModel) admin.getTablaConsul().getModel();
+            Object[] row = new Object[8];
+            for(int x=0; x<Usuarios.size();x++){
+                row[0] = Usuarios.get(x).getPasaport();
+                row[1] = Usuarios.get(x).getNomb();
+                row[2] = Usuarios.get(x).getApell();
+                row[3] = Usuarios.get(x).getContras();
+                row[4] = Usuarios.get(x).getP();
+                row[5] = Usuarios.get(x).getCel();
+                row[6] = Usuarios.get(x).getCorr();
+                row[7] = Usuarios.get(x).getFecha();
+                model.addRow(row);
+            }
+            admin.getPanelConsulUsuarios().setVisible(true);
+            admin.getPanelConsulCiudad().setVisible(false);
+            admin.getPanelConsulPais().setVisible(false);
+            admin.getPanelConsulAer().setVisible(false);
+            admin.getPanelConsulVuelo().setVisible(false);
+        }
+        else{
+            if(opc.equals("Pais")){
+                ArrayList<Pais> Lista = new ArrayList<Pais>();
+                try {
+                    conectar.setRs(conectar.getComando().executeQuery(sql));
+                    while(conectar.getRs().next()){
+                        pais.setId_Pais(conectar.getRs().getInt("id_Cod_Pais"));
+                        pais.setNombre(conectar.getRs().getString("Nombre"));
+                        Lista.add(pais);
+                        pais = new Pais();
+                    }
+                } catch (SQLException ex) {
+                    Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                sql = "SELECT COUNT(*) FROM "+opc+";";
+                try {
+                conectar.setRs(conectar.getComando().executeQuery(sql));
+                    while(conectar.getRs().next()){
+                        Lista.add(pais);
+                    }
+
+                } catch (SQLException ex) {
+                    Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                DefaultTableModel model = (DefaultTableModel) admin.getTablaConsulPais().getModel();
+                Object[] row = new Object[2];
+                for(int x=0; x<Lista.size();x++){
+                    row[0] = Lista.get(x).getId_Pais();
+                    row[1] = Lista.get(x).getNombre();
+                    model.addRow(row);
+                }
+                admin.getPanelConsulPais().setVisible(true);
+                admin.getPanelConsulUsuarios().setVisible(false);
+                admin.getPanelConsulCiudad().setVisible(false);
+                admin.getPanelConsulAer().setVisible(false);
+                admin.getPanelConsulVuelo().setVisible(false);
+            }
+            else{
+                if(opc.equals("Ciudad")){
+                    ArrayList<Ciudad> Lista = new ArrayList<Ciudad>();
+                    try {
+                        conectar.setRs(conectar.getComando().executeQuery(sql));
+                        while(conectar.getRs().next()){
+                            ciudad.setId_Nom_Ciudad(conectar.getRs().getString("id_Nom_Ciudad"));
+                            ciudad.setPais(conectar.getRs().getString("Pais"));
+                            Lista.add(ciudad);
+                            ciudad = new Ciudad();
+                        }
+                    } catch (SQLException ex) {
+                        Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    sql = "SELECT COUNT(*) FROM "+opc+";";
+                    try {
+                    conectar.setRs(conectar.getComando().executeQuery(sql));
+                        while(conectar.getRs().next()){
+                            Lista.add(ciudad);
+                        }
+
+                    } catch (SQLException ex) {
+                        Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    DefaultTableModel model = (DefaultTableModel) admin.getTablaConsulCiudad().getModel();
+                    Object[] row = new Object[2];
+                    for(int x=0; x<Lista.size();x++){
+                        row[0] = Lista.get(x).getId_Nom_Ciudad();
+                        row[1] = Lista.get(x).getPais();
+                        model.addRow(row);
+                    }
+                    admin.getPanelConsulCiudad().setVisible(true);
+                    admin.getPanelConsulUsuarios().setVisible(false);
+                    admin.getPanelConsulPais().setVisible(false);
+                    admin.getPanelConsulAer().setVisible(false);
+                    admin.getPanelConsulVuelo().setVisible(false);
+                }
+                else{
+                    if(opc.equals("Aeropuerto")){
+                        ArrayList<Aeropuerto> Lista = new ArrayList<Aeropuerto>();
+                        try {
+                            conectar.setRs(conectar.getComando().executeQuery(sql));
+                            while(conectar.getRs().next()){
+                                aer.setId_Nom_Aeropuerto(conectar.getRs().getString("id_Nom_Aeropuerto"));
+                                aer.setSiglas(conectar.getRs().getString("Siglas"));
+                                aer.setCiudad(conectar.getRs().getString("Ciudad"));
+                                Lista.add(aer);
+                                aer = new Aeropuerto();
+                            }
+                        } catch (SQLException ex) {
+                            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        sql = "SELECT COUNT(*) FROM "+opc+";";
+                        try {
+                        conectar.setRs(conectar.getComando().executeQuery(sql));
+                            while(conectar.getRs().next()){
+                                Lista.add(aer);
+                            }
+
+                        } catch (SQLException ex) {
+                            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        DefaultTableModel model = (DefaultTableModel) admin.getTablaConsulAer().getModel();
+                        Object[] row = new Object[3];
+                        for(int x=0; x<Lista.size();x++){
+                            row[0] = Lista.get(x).getId_Nom_Aeropuerto();
+                            row[1] = Lista.get(x).getSiglas();
+                            row[2] = Lista.get(x).getCiudad();
+                            model.addRow(row);
+                        }
+                        admin.getPanelConsulAer().setVisible(true);
+                        admin.getPanelConsulCiudad().setVisible(false);
+                        admin.getPanelConsulUsuarios().setVisible(false);
+                        admin.getPanelConsulPais().setVisible(false);
+                        admin.getPanelConsulVuelo().setVisible(false);
+                    }
+                    else{
+                        if(opc.equals("Vuelo")){
+                            ArrayList<Vuelo> Lista = new ArrayList<Vuelo>();
+                            try {
+                                conectar.setRs(conectar.getComando().executeQuery(sql));
+                                while(conectar.getRs().next()){
+                                    vuelo.setId_Vuelo(conectar.getRs().getInt("id_Vuelo"));
+                                    vuelo.setId_Usuario(conectar.getRs().getString("id_Usuario"));
+                                    vuelo.setAeropuerto_Origen(conectar.getRs().getString("Aeropuerto_Origen"));
+                                    vuelo.setAeropuerto_Destino(conectar.getRs().getString("Aeropuerto_Destino"));
+                                    vuelo.setHora_Partida(conectar.getRs().getTime("Hora_Partida"));
+                                    vuelo.setHora_Llegada(conectar.getRs().getTime("Hora_Llegada"));
+                                    vuelo.setDistancia(conectar.getRs().getInt("Distancia"));
+                                    vuelo.setDuracion(conectar.getRs().getTime("Duracion"));
+                                    vuelo.setCosto(conectar.getRs().getInt("Costo"));
+                                    Lista.add(vuelo);
+                                    vuelo = new Vuelo();
+                                }
+                            } catch (SQLException ex) {
+                                Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                            sql = "SELECT COUNT(*) FROM "+opc+";";
+                            try {
+                            conectar.setRs(conectar.getComando().executeQuery(sql));
+                                while(conectar.getRs().next()){
+                                    Lista.add(vuelo);
+                                }
+
+                            } catch (SQLException ex) {
+                                Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                            DefaultTableModel model = (DefaultTableModel) admin.getTablaConsulVuelo().getModel();
+                            Object[] row = new Object[9];
+                            for(int x=0; x<Lista.size();x++){
+                                row[0] = Lista.get(x).getId_Vuelo();
+                                row[1] = Lista.get(x).getId_Usuario();
+                                row[2] = Lista.get(x).getAeropuerto_Origen();
+                                row[3] = Lista.get(x).getAeropuerto_Destino();
+                                row[4] = Lista.get(x).getHora_Partida();
+                                row[5] = Lista.get(x).getHora_Llegada();
+                                row[6] = Lista.get(x).getDistancia();
+                                row[7] = Lista.get(x).getDuracion();
+                                row[8] = Lista.get(x).getCosto();
+                                model.addRow(row);
+                            }
+                            admin.getPanelConsulVuelo().setVisible(true);
+                            admin.getPanelConsulAer().setVisible(false);
+                            admin.getPanelConsulCiudad().setVisible(false);
+                            admin.getPanelConsulUsuarios().setVisible(false);
+                            admin.getPanelConsulPais().setVisible(false);
+                        }
+                    }
+                }
+            }
         }
         
     }
