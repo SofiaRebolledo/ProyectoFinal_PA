@@ -119,6 +119,39 @@ public class Admin extends javax.swing.JFrame {
         tablaConsulVuelo = new javax.swing.JTable();
         adminSalirConsul = new javax.swing.JButton();
         PanelAgregar = new javax.swing.JPanel();
+        adminSelTablaAgregar = new javax.swing.JComboBox<>();
+        jButton1 = new javax.swing.JButton();
+        adminSalirAdd = new javax.swing.JButton();
+        adminPanelAddVuelo = new javax.swing.JPanel();
+        adminAddVueloIdVuelo = new javax.swing.JTextField();
+        adminAddVueloIdUser = new javax.swing.JTextField();
+        adminAddVueloAerOri = new javax.swing.JTextField();
+        adminAddVueloAerDest = new javax.swing.JTextField();
+        adminAddVueloHoraP = new javax.swing.JTextField();
+        adminAddVueloHoraLL = new javax.swing.JTextField();
+        adminAddVueloDistancia = new javax.swing.JTextField();
+        adminAddVueloDura = new javax.swing.JTextField();
+        adminAddVueloCosto = new javax.swing.JTextField();
+        adminPanelAddAeropuerto = new javax.swing.JPanel();
+        adminAddAeridNomAer = new javax.swing.JTextField();
+        adminAddAerSiglas = new javax.swing.JTextField();
+        adminAddAerCiudad = new javax.swing.JTextField();
+        adminPanelAddUsuario = new javax.swing.JPanel();
+        adminAddUserNombre = new javax.swing.JTextField();
+        adminAddUserApellido = new javax.swing.JTextField();
+        adminAddUserPasaporte = new javax.swing.JTextField();
+        AdminAddUserContrasena = new javax.swing.JPasswordField();
+        AdminAddUserPais = new javax.swing.JTextField();
+        AdminAddUserCelular = new javax.swing.JTextField();
+        AdminAddUserCorreo = new javax.swing.JTextField();
+        AdminAddUserFecha = new javax.swing.JTextField();
+        adminPanelAddPais = new javax.swing.JPanel();
+        adminAddPaisIdCodPais = new javax.swing.JTextField();
+        adminAddAerSiglas1 = new javax.swing.JTextField();
+        adminPanelAddCiu = new javax.swing.JPanel();
+        adminAddCiu_id_Nom_Ciudad = new javax.swing.JTextField();
+        adminAddCiuPais = new javax.swing.JTextField();
+        adminBtnAdd = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setUndecorated(true);
@@ -235,6 +268,125 @@ public class Admin extends javax.swing.JFrame {
 
         PanelAgregar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        adminSelTablaAgregar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Usuario", "Pais", "Ciudad", "Aeropuerto", "Vuelo" }));
+        PanelAgregar.add(adminSelTablaAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 660, 40));
+
+        jButton1.setText("Seleccionar Tabla");
+        PanelAgregar.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 10, -1, 40));
+
+        adminSalirAdd.setText("X");
+        adminSalirAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adminSalirAddActionPerformed(evt);
+            }
+        });
+        PanelAgregar.add(adminSalirAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 10, 50, 40));
+
+        adminPanelAddVuelo.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Vuelo:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 24))); // NOI18N
+        adminPanelAddVuelo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        adminAddVueloIdVuelo.setBorder(javax.swing.BorderFactory.createTitledBorder("id_Vuelo:"));
+        adminPanelAddVuelo.add(adminAddVueloIdVuelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 390, 60));
+
+        adminAddVueloIdUser.setBorder(javax.swing.BorderFactory.createTitledBorder("id_Usuario:"));
+        adminPanelAddVuelo.add(adminAddVueloIdUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, 390, 60));
+
+        adminAddVueloAerOri.setBorder(javax.swing.BorderFactory.createTitledBorder("Aeropuerto Origen:"));
+        adminPanelAddVuelo.add(adminAddVueloAerOri, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 390, 60));
+
+        adminAddVueloAerDest.setBorder(javax.swing.BorderFactory.createTitledBorder("Aeropuerto Destino:"));
+        adminPanelAddVuelo.add(adminAddVueloAerDest, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 120, 390, 60));
+
+        adminAddVueloHoraP.setBorder(javax.swing.BorderFactory.createTitledBorder("Hora Partida:"));
+        adminPanelAddVuelo.add(adminAddVueloHoraP, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 390, 60));
+
+        adminAddVueloHoraLL.setBorder(javax.swing.BorderFactory.createTitledBorder("Hora Llegada:"));
+        adminPanelAddVuelo.add(adminAddVueloHoraLL, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 200, 390, 60));
+
+        adminAddVueloDistancia.setBorder(javax.swing.BorderFactory.createTitledBorder("Distancia:"));
+        adminPanelAddVuelo.add(adminAddVueloDistancia, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 390, 60));
+
+        adminAddVueloDura.setBorder(javax.swing.BorderFactory.createTitledBorder("Duración:"));
+        adminPanelAddVuelo.add(adminAddVueloDura, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 280, 390, 60));
+
+        adminAddVueloCosto.setBorder(javax.swing.BorderFactory.createTitledBorder("Costo:"));
+        adminPanelAddVuelo.add(adminAddVueloCosto, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, 390, 60));
+
+        PanelAgregar.add(adminPanelAddVuelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 880, 430));
+
+        adminPanelAddAeropuerto.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Aeropuerto:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 24))); // NOI18N
+        adminPanelAddAeropuerto.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        adminAddAeridNomAer.setBorder(javax.swing.BorderFactory.createTitledBorder("id_Nom_Aeropuerto:"));
+        adminPanelAddAeropuerto.add(adminAddAeridNomAer, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 390, 60));
+
+        adminAddAerSiglas.setBorder(javax.swing.BorderFactory.createTitledBorder("Siglas:"));
+        adminPanelAddAeropuerto.add(adminAddAerSiglas, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 80, 390, 60));
+
+        adminAddAerCiudad.setBorder(javax.swing.BorderFactory.createTitledBorder("Ciudad:"));
+        adminPanelAddAeropuerto.add(adminAddAerCiudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 390, 60));
+
+        PanelAgregar.add(adminPanelAddAeropuerto, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 880, 430));
+
+        adminPanelAddUsuario.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Usuario:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 24))); // NOI18N
+        adminPanelAddUsuario.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        adminAddUserNombre.setBorder(javax.swing.BorderFactory.createTitledBorder("Nombre:"));
+        adminPanelAddUsuario.add(adminAddUserNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 390, 60));
+
+        adminAddUserApellido.setBorder(javax.swing.BorderFactory.createTitledBorder("Apellido:"));
+        adminPanelAddUsuario.add(adminAddUserApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, 390, 60));
+
+        adminAddUserPasaporte.setBorder(javax.swing.BorderFactory.createTitledBorder("Pasaporte: "));
+        adminPanelAddUsuario.add(adminAddUserPasaporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 390, 60));
+
+        AdminAddUserContrasena.setBorder(javax.swing.BorderFactory.createTitledBorder("Contraseña:"));
+        adminPanelAddUsuario.add(AdminAddUserContrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 120, 390, 60));
+
+        AdminAddUserPais.setBorder(javax.swing.BorderFactory.createTitledBorder("Pais:"));
+        adminPanelAddUsuario.add(AdminAddUserPais, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 390, 60));
+
+        AdminAddUserCelular.setBorder(javax.swing.BorderFactory.createTitledBorder("Celular:"));
+        adminPanelAddUsuario.add(AdminAddUserCelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 200, 390, 60));
+
+        AdminAddUserCorreo.setBorder(javax.swing.BorderFactory.createTitledBorder("Correo:"));
+        adminPanelAddUsuario.add(AdminAddUserCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 390, 60));
+
+        AdminAddUserFecha.setBorder(javax.swing.BorderFactory.createTitledBorder("Fecha Nacimiento:"));
+        adminPanelAddUsuario.add(AdminAddUserFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 280, 390, 60));
+
+        PanelAgregar.add(adminPanelAddUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 880, 430));
+
+        adminPanelAddPais.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pais:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 24))); // NOI18N
+        adminPanelAddPais.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        adminAddPaisIdCodPais.setBorder(javax.swing.BorderFactory.createTitledBorder("id_Cod_Pais:"));
+        adminPanelAddPais.add(adminAddPaisIdCodPais, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 390, 60));
+
+        adminAddAerSiglas1.setBorder(javax.swing.BorderFactory.createTitledBorder("Nombre:"));
+        adminPanelAddPais.add(adminAddAerSiglas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 80, 390, 60));
+
+        PanelAgregar.add(adminPanelAddPais, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 880, 430));
+
+        adminPanelAddCiu.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ciudad:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 24))); // NOI18N
+        adminPanelAddCiu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        adminAddCiu_id_Nom_Ciudad.setBorder(javax.swing.BorderFactory.createTitledBorder("id_Nom_Ciudad:"));
+        adminPanelAddCiu.add(adminAddCiu_id_Nom_Ciudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 390, 60));
+
+        adminAddCiuPais.setBorder(javax.swing.BorderFactory.createTitledBorder("Pais:"));
+        adminPanelAddCiu.add(adminAddCiuPais, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 80, 390, 60));
+
+        PanelAgregar.add(adminPanelAddCiu, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 880, 430));
+
+        adminBtnAdd.setText("Agregar");
+        adminBtnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adminBtnAddActionPerformed(evt);
+            }
+        });
+        PanelAgregar.add(adminBtnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 490, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -260,6 +412,14 @@ public class Admin extends javax.swing.JFrame {
     private void adminSalirConsulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminSalirConsulActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_adminSalirConsulActionPerformed
+
+    private void adminSalirAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminSalirAddActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_adminSalirAddActionPerformed
+
+    private void adminBtnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminBtnAddActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_adminBtnAddActionPerformed
 
     /**
      * @param args the command line arguments
@@ -297,11 +457,44 @@ public class Admin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField AdminAddUserCelular;
+    private javax.swing.JPasswordField AdminAddUserContrasena;
+    private javax.swing.JTextField AdminAddUserCorreo;
+    private javax.swing.JTextField AdminAddUserFecha;
+    private javax.swing.JTextField AdminAddUserPais;
     private javax.swing.JButton BtnConsultar;
     private javax.swing.JComboBox<String> OpcConsul;
     private javax.swing.JPanel PanelAgregar;
     private javax.swing.JPanel PanelConsultas;
+    private javax.swing.JTextField adminAddAerCiudad;
+    private javax.swing.JTextField adminAddAerSiglas;
+    private javax.swing.JTextField adminAddAerSiglas1;
+    private javax.swing.JTextField adminAddAeridNomAer;
+    private javax.swing.JTextField adminAddCiuPais;
+    private javax.swing.JTextField adminAddCiu_id_Nom_Ciudad;
+    private javax.swing.JTextField adminAddPaisIdCodPais;
+    private javax.swing.JTextField adminAddUserApellido;
+    private javax.swing.JTextField adminAddUserNombre;
+    private javax.swing.JTextField adminAddUserPasaporte;
+    private javax.swing.JTextField adminAddVueloAerDest;
+    private javax.swing.JTextField adminAddVueloAerOri;
+    private javax.swing.JTextField adminAddVueloCosto;
+    private javax.swing.JTextField adminAddVueloDistancia;
+    private javax.swing.JTextField adminAddVueloDura;
+    private javax.swing.JTextField adminAddVueloHoraLL;
+    private javax.swing.JTextField adminAddVueloHoraP;
+    private javax.swing.JTextField adminAddVueloIdUser;
+    private javax.swing.JTextField adminAddVueloIdVuelo;
+    private javax.swing.JButton adminBtnAdd;
+    private javax.swing.JPanel adminPanelAddAeropuerto;
+    private javax.swing.JPanel adminPanelAddCiu;
+    private javax.swing.JPanel adminPanelAddPais;
+    private javax.swing.JPanel adminPanelAddUsuario;
+    private javax.swing.JPanel adminPanelAddVuelo;
+    private javax.swing.JButton adminSalirAdd;
     private javax.swing.JButton adminSalirConsul;
+    private javax.swing.JComboBox<String> adminSelTablaAgregar;
+    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;

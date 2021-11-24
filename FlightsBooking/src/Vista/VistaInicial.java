@@ -2,6 +2,7 @@
 package Vista;
 
 import java.awt.Dimension;
+import javax.swing.ButtonGroup;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -325,8 +326,16 @@ public class VistaInicial extends javax.swing.JFrame {
         return jLabel14;
     }
 
-    public JLabel getjLabel15() {
-        return jLabel15;
+    public ButtonGroup getOpcion_Ida_Vuelta() {
+        return Opcion_Ida_Vuelta;
+    }
+
+    public JRadioButton getjR_IdaVuelta() {
+        return jR_IdaVuelta;
+    }
+
+    public JRadioButton getjR_SoloIda() {
+        return jR_SoloIda;
     }
 
     public JLabel getjLabel16() {
@@ -550,6 +559,8 @@ public class VistaInicial extends javax.swing.JFrame {
         jLabel37 = new javax.swing.JLabel();
         NuevoDato = new javax.swing.JTextField();
         BotonRegresarModificarDatos = new javax.swing.JLabel();
+        jDateSalida = new com.toedter.calendar.JDateChooser();
+        jDateVuelta = new com.toedter.calendar.JDateChooser();
         jLabel3 = new javax.swing.JLabel();
         BotonMiCuenta = new javax.swing.JLabel();
         BotonMisViajes = new javax.swing.JLabel();
@@ -572,8 +583,6 @@ public class VistaInicial extends javax.swing.JFrame {
         jLabel24 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel25 = new javax.swing.JLabel();
-        jDateVuelta = new com.toedter.calendar.JDateChooser();
-        jDateSalida = new com.toedter.calendar.JDateChooser();
         PanelAdministrador = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -797,6 +806,8 @@ public class VistaInicial extends javax.swing.JFrame {
         PanelModificarDatos.add(PanelInternoModificarDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 0, 330, 150));
 
         PanelPrincipal.add(PanelModificarDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 580, 150));
+        PanelPrincipal.add(jDateSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, 100, 20));
+        PanelPrincipal.add(jDateVuelta, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 100, 20));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Encabezado2.png"))); // NOI18N
         PanelPrincipal.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 70));
@@ -871,8 +882,6 @@ public class VistaInicial extends javax.swing.JFrame {
 
         jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BuscarVuelos.png"))); // NOI18N
         PanelPrincipal.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 250, -1, -1));
-        PanelPrincipal.add(jDateVuelta, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 350, 110, -1));
-        PanelPrincipal.add(jDateSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 320, 110, -1));
 
         getContentPane().add(PanelPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 430));
 
