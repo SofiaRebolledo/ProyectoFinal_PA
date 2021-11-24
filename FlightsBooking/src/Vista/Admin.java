@@ -12,6 +12,14 @@ public class Admin extends javax.swing.JFrame {
         initComponents();
     }
 
+    public JPanel getPanelAgregar() {
+        return PanelAgregar;
+    }
+
+    public JButton getAdminSalirConsul() {
+        return adminSalirConsul;
+    }
+
     public JScrollPane getjScrollPane5() {
         return jScrollPane5;
     }
@@ -109,9 +117,11 @@ public class Admin extends javax.swing.JFrame {
         panelConsulVuelo = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
         tablaConsulVuelo = new javax.swing.JTable();
+        adminSalirConsul = new javax.swing.JButton();
         PanelAgregar = new javax.swing.JPanel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setUndecorated(true);
 
         PanelConsultas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -125,7 +135,7 @@ public class Admin extends javax.swing.JFrame {
                 BtnConsultarActionPerformed(evt);
             }
         });
-        PanelConsultas.add(BtnConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(524, 0, 356, -1));
+        PanelConsultas.add(BtnConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(524, 0, 300, -1));
 
         panelConsulUsuarios.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -215,6 +225,14 @@ public class Admin extends javax.swing.JFrame {
 
         PanelConsultas.add(panelConsulVuelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 32, 870, 480));
 
+        adminSalirConsul.setText("X");
+        adminSalirConsul.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adminSalirConsulActionPerformed(evt);
+            }
+        });
+        PanelConsultas.add(adminSalirConsul, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 0, 50, -1));
+
         PanelAgregar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -223,7 +241,7 @@ public class Admin extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(PanelConsultas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(PanelAgregar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 880, Short.MAX_VALUE))
+                .addComponent(PanelAgregar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 913, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -238,6 +256,10 @@ public class Admin extends javax.swing.JFrame {
     private void BtnConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsultarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BtnConsultarActionPerformed
+
+    private void adminSalirConsulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminSalirConsulActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_adminSalirConsulActionPerformed
 
     /**
      * @param args the command line arguments
@@ -279,6 +301,7 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> OpcConsul;
     private javax.swing.JPanel PanelAgregar;
     private javax.swing.JPanel PanelConsultas;
+    private javax.swing.JButton adminSalirConsul;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;

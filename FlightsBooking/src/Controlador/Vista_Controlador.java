@@ -176,6 +176,12 @@ public class Vista_Controlador{
                 adminConsultar();
             }
         });
+        admin.getAdminSalirConsul().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                admin.setVisible(false);
+            }
+        });
     }
     
     public void abrirRegistro(){
@@ -244,7 +250,35 @@ public class Vista_Controlador{
             }else{
                 JOptionPane.showMessageDialog(vista,"Alguno de tus datos es erroneo, por favor revisa.");
             }
-        } 
+        }
+        String sql = "SELECT * FROM Aeropuerto;";
+        ArrayList<Aeropuerto> Lista = new ArrayList<Aeropuerto>();
+        try {
+            conectar.setRs(conectar.getComando().executeQuery(sql));
+            while(conectar.getRs().next()){
+                aer.setId_Nom_Aeropuerto(conectar.getRs().getString("id_Nom_Aeropuerto"));
+                aer.setSiglas(conectar.getRs().getString("Siglas"));
+                aer.setCiudad(conectar.getRs().getString("Ciudad"));
+                Lista.add(aer);
+                aer = new Aeropuerto();
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        sql = "SELECT COUNT(*) FROM Aeropuerto;";
+        try {
+        conectar.setRs(conectar.getComando().executeQuery(sql));
+            while(conectar.getRs().next()){
+                Lista.add(aer);
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        for(int x=0; x<Lista.size();x++){
+            vista.getjComboDESDE().addItem(Lista.get(x).getId_Nom_Aeropuerto());
+            vista.getjComboHACIA().addItem(Lista.get(x).getId_Nom_Aeropuerto());
+        }
     }
     
     public void miCuenta(){
@@ -346,6 +380,8 @@ public class Vista_Controlador{
         admin.getPanelConsulUsuarios().setVisible(false);
         admin.getPanelConsulPais().setVisible(false);
         admin.getPanelConsulCiudad().setVisible(false);
+        admin.getPanelConsulAer().setVisible(false);
+        admin.getPanelConsulVuelo().setVisible(false);
     }
     
     public void adminConsultar(){

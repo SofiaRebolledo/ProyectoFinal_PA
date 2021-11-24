@@ -474,11 +474,11 @@ public class VistaInicial extends javax.swing.JFrame {
     }
 
     public JRadioButton getjRadioButton1() {
-        return jRadioButton1;
+        return jR_SoloIda;
     }
 
     public JRadioButton getjRadioButton2() {
-        return jRadioButton2;
+        return jR_IdaVuelta;
     }
 
     public JTextField getjTextField1() {
@@ -500,6 +500,7 @@ public class VistaInicial extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Opcion_Ida_Vuelta = new javax.swing.ButtonGroup();
         PanelPrincipal = new javax.swing.JPanel();
         PanelCuenta = new javax.swing.JPanel();
         jLabel35 = new javax.swing.JLabel();
@@ -556,8 +557,8 @@ public class VistaInicial extends javax.swing.JFrame {
         BotonAyuda = new javax.swing.JLabel();
         BotonSalir3 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        jR_SoloIda = new javax.swing.JRadioButton();
+        jR_IdaVuelta = new javax.swing.JRadioButton();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jComboHACIA = new javax.swing.JComboBox<>();
@@ -811,13 +812,20 @@ public class VistaInicial extends javax.swing.JFrame {
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FotoViaje.png"))); // NOI18N
         PanelPrincipal.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 580, 150));
 
-        jRadioButton1.setBackground(new java.awt.Color(255, 153, 51));
-        jRadioButton1.setText("Solo Ida");
-        PanelPrincipal.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, -1, -1));
+        jR_SoloIda.setBackground(new java.awt.Color(255, 153, 51));
+        Opcion_Ida_Vuelta.add(jR_SoloIda);
+        jR_SoloIda.setText("Solo Ida");
+        jR_SoloIda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jR_SoloIdaActionPerformed(evt);
+            }
+        });
+        PanelPrincipal.add(jR_SoloIda, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, -1, -1));
 
-        jRadioButton2.setBackground(new java.awt.Color(255, 153, 51));
-        jRadioButton2.setText("Ida y Vuelta");
-        PanelPrincipal.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
+        jR_IdaVuelta.setBackground(new java.awt.Color(255, 153, 51));
+        Opcion_Ida_Vuelta.add(jR_IdaVuelta);
+        jR_IdaVuelta.setText("Ida y Vuelta");
+        PanelPrincipal.add(jR_IdaVuelta, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
         jLabel15.setText("->");
@@ -827,7 +835,6 @@ public class VistaInicial extends javax.swing.JFrame {
         jLabel16.setText("COMO VIAJAS?");
         PanelPrincipal.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 300, -1, -1));
 
-        jComboHACIA.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         PanelPrincipal.add(jComboHACIA, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 340, -1, -1));
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
@@ -838,7 +845,6 @@ public class VistaInicial extends javax.swing.JFrame {
         jLabel18.setText("HACIA");
         PanelPrincipal.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 320, -1, 10));
 
-        jComboDESDE.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         PanelPrincipal.add(jComboDESDE, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, -1, -1));
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -1049,6 +1055,10 @@ public class VistaInicial extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
+    private void jR_SoloIdaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jR_SoloIdaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jR_SoloIdaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1137,6 +1147,7 @@ public class VistaInicial extends javax.swing.JFrame {
     private javax.swing.JLabel Opcion1;
     private javax.swing.JLabel Opcion2;
     private javax.swing.JLabel Opcion3;
+    private javax.swing.ButtonGroup Opcion_Ida_Vuelta;
     private javax.swing.JTextField PaisRegistro;
     private javax.swing.JPanel PanelAdministrador;
     private javax.swing.JPanel PanelAyuda;
@@ -1200,8 +1211,8 @@ public class VistaInicial extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jR_IdaVuelta;
+    private javax.swing.JRadioButton jR_SoloIda;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
