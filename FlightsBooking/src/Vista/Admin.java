@@ -109,6 +109,7 @@ public class Admin extends javax.swing.JFrame {
         panelConsulVuelo = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
         tablaConsulVuelo = new javax.swing.JTable();
+        PanelAgregar = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -214,15 +215,21 @@ public class Admin extends javax.swing.JFrame {
 
         PanelConsultas.add(panelConsulVuelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 32, 870, 480));
 
+        PanelAgregar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(PanelConsultas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(PanelAgregar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 880, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PanelConsultas, javax.swing.GroupLayout.DEFAULT_SIZE, 517, Short.MAX_VALUE)
+            .addComponent(PanelConsultas, javax.swing.GroupLayout.DEFAULT_SIZE, 557, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(PanelAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, 557, Short.MAX_VALUE))
         );
 
         pack();
@@ -270,6 +277,7 @@ public class Admin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnConsultar;
     private javax.swing.JComboBox<String> OpcConsul;
+    private javax.swing.JPanel PanelAgregar;
     private javax.swing.JPanel PanelConsultas;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
