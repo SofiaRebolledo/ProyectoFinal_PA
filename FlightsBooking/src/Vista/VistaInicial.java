@@ -501,7 +501,6 @@ public class VistaInicial extends javax.swing.JFrame {
     private void initComponents() {
 
         Opcion_Ida_Vuelta = new javax.swing.ButtonGroup();
-        PanelPrincipal = new javax.swing.JPanel();
         PanelCuenta = new javax.swing.JPanel();
         jLabel35 = new javax.swing.JLabel();
         LabelCorreoCuenta = new javax.swing.JLabel();
@@ -522,6 +521,14 @@ public class VistaInicial extends javax.swing.JFrame {
         Opcion2 = new javax.swing.JLabel();
         Opcion3 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
+        PanelNotificacion = new javax.swing.JPanel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        LabelNumeroNotificaciones = new javax.swing.JLabel();
+        LabelNombreNotificaciones = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
         PanelMisViajes = new javax.swing.JPanel();
         jLabel38 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
@@ -530,6 +537,7 @@ public class VistaInicial extends javax.swing.JFrame {
         LabelNumeroViajes = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
         LabelNombreViajes1 = new javax.swing.JLabel();
+        PanelPrincipal = new javax.swing.JPanel();
         PanelModificarDatos = new javax.swing.JPanel();
         NoPasaporte1 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
@@ -542,14 +550,6 @@ public class VistaInicial extends javax.swing.JFrame {
         jLabel37 = new javax.swing.JLabel();
         NuevoDato = new javax.swing.JTextField();
         BotonRegresarModificarDatos = new javax.swing.JLabel();
-        PanelNotificacion = new javax.swing.JPanel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        LabelNumeroNotificaciones = new javax.swing.JLabel();
-        LabelNombreNotificaciones = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         BotonMiCuenta = new javax.swing.JLabel();
         BotonMisViajes = new javax.swing.JLabel();
@@ -559,7 +559,6 @@ public class VistaInicial extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jR_SoloIda = new javax.swing.JRadioButton();
         jR_IdaVuelta = new javax.swing.JRadioButton();
-        jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jComboHACIA = new javax.swing.JComboBox<>();
         jLabel17 = new javax.swing.JLabel();
@@ -573,6 +572,8 @@ public class VistaInicial extends javax.swing.JFrame {
         jLabel24 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel25 = new javax.swing.JLabel();
+        jDateVuelta = new com.toedter.calendar.JDateChooser();
+        jDateSalida = new com.toedter.calendar.JDateChooser();
         PanelAdministrador = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -623,10 +624,6 @@ public class VistaInicial extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        PanelPrincipal.setBackground(new java.awt.Color(0, 153, 255));
-        PanelPrincipal.setMaximumSize(new java.awt.Dimension(630, 430));
-        PanelPrincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         PanelCuenta.setBackground(new java.awt.Color(0, 102, 204));
         PanelCuenta.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -651,7 +648,7 @@ public class VistaInicial extends javax.swing.JFrame {
         BotonModificarDatos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/CAMBIARDATOS.png"))); // NOI18N
         PanelCuenta.add(BotonModificarDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 100, -1, -1));
 
-        PanelPrincipal.add(PanelCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 590, 150));
+        getContentPane().add(PanelCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 590, 150));
 
         PanelBusquedaVuelos.setBackground(new java.awt.Color(0, 153, 255));
         PanelBusquedaVuelos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -688,7 +685,36 @@ public class VistaInicial extends javax.swing.JFrame {
         jLabel43.setText("jLabel43");
         PanelBusquedaVuelos.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, 360, 60));
 
-        PanelPrincipal.add(PanelBusquedaVuelos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 430));
+        getContentPane().add(PanelBusquedaVuelos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 430));
+
+        PanelNotificacion.setBackground(new java.awt.Color(0, 153, 204));
+        PanelNotificacion.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Encabezado6.png"))); // NOI18N
+        PanelNotificacion.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 150));
+
+        jLabel29.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel29.setText("HOLA!!!,");
+        PanelNotificacion.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, -1, -1));
+
+        LabelNumeroNotificaciones.setFont(new java.awt.Font("Yu Gothic", 1, 18)); // NOI18N
+        LabelNumeroNotificaciones.setForeground(new java.awt.Color(0, 204, 255));
+        LabelNumeroNotificaciones.setText("1");
+        PanelNotificacion.add(LabelNumeroNotificaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 30, 60, 30));
+
+        LabelNombreNotificaciones.setText("PONER NOMBRE AQUI");
+        PanelNotificacion.add(LabelNombreNotificaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, -1, -1));
+
+        jLabel32.setText("MENSAJE.");
+        PanelNotificacion.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 40, -1, -1));
+
+        jLabel33.setText("ACTUALMENTE TIENES: ");
+        PanelNotificacion.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, -1, -1));
+
+        jLabel34.setText("-PONER COMPRAS EXITOSAS Y PROCESOS NO TERMINADOS");
+        PanelNotificacion.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 50, 310, 60));
+
+        getContentPane().add(PanelNotificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 580, 150));
 
         PanelMisViajes.setBackground(new java.awt.Color(0, 153, 204));
         PanelMisViajes.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -717,7 +743,11 @@ public class VistaInicial extends javax.swing.JFrame {
         LabelNombreViajes1.setText("PONER NOMBRE AQUI");
         PanelMisViajes.add(LabelNombreViajes1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, -1, -1));
 
-        PanelPrincipal.add(PanelMisViajes, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 580, 150));
+        getContentPane().add(PanelMisViajes, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 580, 150));
+
+        PanelPrincipal.setBackground(new java.awt.Color(0, 153, 255));
+        PanelPrincipal.setMaximumSize(new java.awt.Dimension(630, 430));
+        PanelPrincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         PanelModificarDatos.setBackground(new java.awt.Color(0, 153, 204));
         PanelModificarDatos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -768,35 +798,6 @@ public class VistaInicial extends javax.swing.JFrame {
 
         PanelPrincipal.add(PanelModificarDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 580, 150));
 
-        PanelNotificacion.setBackground(new java.awt.Color(0, 153, 204));
-        PanelNotificacion.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Encabezado6.png"))); // NOI18N
-        PanelNotificacion.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 150));
-
-        jLabel29.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel29.setText("HOLA!!!,");
-        PanelNotificacion.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, -1, -1));
-
-        LabelNumeroNotificaciones.setFont(new java.awt.Font("Yu Gothic", 1, 18)); // NOI18N
-        LabelNumeroNotificaciones.setForeground(new java.awt.Color(0, 204, 255));
-        LabelNumeroNotificaciones.setText("1");
-        PanelNotificacion.add(LabelNumeroNotificaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 30, 60, 30));
-
-        LabelNombreNotificaciones.setText("PONER NOMBRE AQUI");
-        PanelNotificacion.add(LabelNombreNotificaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, -1, -1));
-
-        jLabel32.setText("MENSAJE.");
-        PanelNotificacion.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 40, -1, -1));
-
-        jLabel33.setText("ACTUALMENTE TIENES: ");
-        PanelNotificacion.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, -1, -1));
-
-        jLabel34.setText("-PONER COMPRAS EXITOSAS Y PROCESOS NO TERMINADOS");
-        PanelNotificacion.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 50, 310, 60));
-
-        PanelPrincipal.add(PanelNotificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 580, 150));
-
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Encabezado2.png"))); // NOI18N
         PanelPrincipal.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 70));
         PanelPrincipal.add(BotonMiCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 110, 50));
@@ -827,23 +828,19 @@ public class VistaInicial extends javax.swing.JFrame {
         jR_IdaVuelta.setText("Ida y Vuelta");
         PanelPrincipal.add(jR_IdaVuelta, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
 
-        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
-        jLabel15.setText("->");
-        PanelPrincipal.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, 20, 20));
-
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel16.setText("COMO VIAJAS?");
-        PanelPrincipal.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 300, -1, -1));
+        PanelPrincipal.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 380, -1, -1));
 
-        PanelPrincipal.add(jComboHACIA, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 340, -1, -1));
+        PanelPrincipal.add(jComboHACIA, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, -1, -1));
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
         jLabel17.setText("PASAJEROS");
-        PanelPrincipal.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 320, -1, 10));
+        PanelPrincipal.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 400, -1, 10));
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
         jLabel18.setText("HACIA");
-        PanelPrincipal.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 320, -1, 10));
+        PanelPrincipal.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, -1, 10));
 
         PanelPrincipal.add(jComboDESDE, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, -1, -1));
 
@@ -861,19 +858,21 @@ public class VistaInicial extends javax.swing.JFrame {
 
         jLabel22.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel22.setText("SALIDA");
-        PanelPrincipal.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, -1, 10));
+        PanelPrincipal.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 320, -1, 10));
 
         jLabel23.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel23.setText("CUANDO VIAJAS?");
-        PanelPrincipal.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 300, -1, -1));
+        PanelPrincipal.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 300, -1, -1));
 
         jLabel24.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel24.setText("VUELTA");
-        PanelPrincipal.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 320, -1, 10));
-        PanelPrincipal.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 340, 100, -1));
+        PanelPrincipal.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 350, -1, 10));
+        PanelPrincipal.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 400, 60, -1));
 
         jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BuscarVuelos.png"))); // NOI18N
-        PanelPrincipal.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 330, -1, -1));
+        PanelPrincipal.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 250, -1, -1));
+        PanelPrincipal.add(jDateVuelta, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 350, 110, -1));
+        PanelPrincipal.add(jDateSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 320, 110, -1));
 
         getContentPane().add(PanelPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 430));
 
@@ -1144,13 +1143,14 @@ public class VistaInicial extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboDESDE;
     private javax.swing.JComboBox<String> jComboHACIA;
+    private com.toedter.calendar.JDateChooser jDateSalida;
+    private com.toedter.calendar.JDateChooser jDateVuelta;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
