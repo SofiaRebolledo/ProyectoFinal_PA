@@ -3,13 +3,151 @@ package Vista;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 
 public class Admin extends javax.swing.JFrame {
 
     public Admin() {
         initComponents();
+    }
+
+    public JTextField getAdminAddPaisNombre() {
+        return adminAddPaisNombre;
+    }
+
+    public JButton getBtnSelectTabla() {
+        return BtnSelectTabla;
+    }
+
+    public JTextField getAdminAddUserCelular() {
+        return AdminAddUserCelular;
+    }
+
+    public JPasswordField getAdminAddUserContrasena() {
+        return AdminAddUserContrasena;
+    }
+
+    public JTextField getAdminAddUserCorreo() {
+        return AdminAddUserCorreo;
+    }
+
+    public JTextField getAdminAddUserFecha() {
+        return AdminAddUserFecha;
+    }
+
+    public JTextField getAdminAddUserPais() {
+        return AdminAddUserPais;
+    }
+
+    public JTextField getAdminAddAerCiudad() {
+        return adminAddAerCiudad;
+    }
+
+    public JTextField getAdminAddAerSiglas() {
+        return adminAddAerSiglas;
+    }
+
+    public JTextField getAdminAddAeridNomAer() {
+        return adminAddAeridNomAer;
+    }
+
+    public JTextField getAdminAddCiuPais() {
+        return adminAddCiuPais;
+    }
+
+    public JTextField getAdminAddCiu_id_Nom_Ciudad() {
+        return adminAddCiu_id_Nom_Ciudad;
+    }
+
+    public JTextField getAdminAddPaisIdCodPais() {
+        return adminAddPaisIdCodPais;
+    }
+
+    public JTextField getAdminAddUserApellido() {
+        return adminAddUserApellido;
+    }
+
+    public JTextField getAdminAddUserNombre() {
+        return adminAddUserNombre;
+    }
+
+    public JTextField getAdminAddUserPasaporte() {
+        return adminAddUserPasaporte;
+    }
+
+    public JTextField getAdminAddVueloAerDest() {
+        return adminAddVueloAerDest;
+    }
+
+    public JTextField getAdminAddVueloAerOri() {
+        return adminAddVueloAerOri;
+    }
+
+    public JTextField getAdminAddVueloCosto() {
+        return adminAddVueloCosto;
+    }
+
+    public JTextField getAdminAddVueloDistancia() {
+        return adminAddVueloDistancia;
+    }
+
+    public JTextField getAdminAddVueloDura() {
+        return adminAddVueloDura;
+    }
+
+    public JTextField getAdminAddVueloHoraLL() {
+        return adminAddVueloHoraLL;
+    }
+
+    public JTextField getAdminAddVueloHoraP() {
+        return adminAddVueloHoraP;
+    }
+
+    public JTextField getAdminAddVueloIdUser() {
+        return adminAddVueloIdUser;
+    }
+
+    public JTextField getAdminAddVueloIdVuelo() {
+        return adminAddVueloIdVuelo;
+    }
+
+    public JButton getAdminBtnAdd() {
+        return adminBtnAdd;
+    }
+
+    public JPanel getAdminPanelAddAeropuerto() {
+        return adminPanelAddAeropuerto;
+    }
+
+    public JPanel getAdminPanelAddCiu() {
+        return adminPanelAddCiu;
+    }
+
+    public JPanel getAdminPanelAddPais() {
+        return adminPanelAddPais;
+    }
+
+    public JPanel getAdminPanelAddUsuario() {
+        return adminPanelAddUsuario;
+    }
+
+    public JPanel getAdminPanelAddVuelo() {
+        return adminPanelAddVuelo;
+    }
+
+    public JButton getAdminSalirAdd() {
+        return adminSalirAdd;
+    }
+
+    public JComboBox<String> getAdminSelTablaAgregar() {
+        return adminSelTablaAgregar;
+    }
+
+    public JButton getjButton1() {
+        return BtnSelectTabla;
     }
 
     public JPanel getPanelAgregar() {
@@ -120,7 +258,7 @@ public class Admin extends javax.swing.JFrame {
         adminSalirConsul = new javax.swing.JButton();
         PanelAgregar = new javax.swing.JPanel();
         adminSelTablaAgregar = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
+        BtnSelectTabla = new javax.swing.JButton();
         adminSalirAdd = new javax.swing.JButton();
         adminPanelAddVuelo = new javax.swing.JPanel();
         adminAddVueloIdVuelo = new javax.swing.JTextField();
@@ -147,7 +285,7 @@ public class Admin extends javax.swing.JFrame {
         AdminAddUserFecha = new javax.swing.JTextField();
         adminPanelAddPais = new javax.swing.JPanel();
         adminAddPaisIdCodPais = new javax.swing.JTextField();
-        adminAddAerSiglas1 = new javax.swing.JTextField();
+        adminAddPaisNombre = new javax.swing.JTextField();
         adminPanelAddCiu = new javax.swing.JPanel();
         adminAddCiu_id_Nom_Ciudad = new javax.swing.JTextField();
         adminAddCiuPais = new javax.swing.JTextField();
@@ -271,8 +409,8 @@ public class Admin extends javax.swing.JFrame {
         adminSelTablaAgregar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Usuario", "Pais", "Ciudad", "Aeropuerto", "Vuelo" }));
         PanelAgregar.add(adminSelTablaAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 660, 40));
 
-        jButton1.setText("Seleccionar Tabla");
-        PanelAgregar.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 10, -1, 40));
+        BtnSelectTabla.setText("Seleccionar Tabla");
+        PanelAgregar.add(BtnSelectTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 10, -1, 40));
 
         adminSalirAdd.setText("X");
         adminSalirAdd.addActionListener(new java.awt.event.ActionListener() {
@@ -363,8 +501,8 @@ public class Admin extends javax.swing.JFrame {
         adminAddPaisIdCodPais.setBorder(javax.swing.BorderFactory.createTitledBorder("id_Cod_Pais:"));
         adminPanelAddPais.add(adminAddPaisIdCodPais, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 390, 60));
 
-        adminAddAerSiglas1.setBorder(javax.swing.BorderFactory.createTitledBorder("Nombre:"));
-        adminPanelAddPais.add(adminAddAerSiglas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 80, 390, 60));
+        adminAddPaisNombre.setBorder(javax.swing.BorderFactory.createTitledBorder("Nombre:"));
+        adminPanelAddPais.add(adminAddPaisNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 80, 390, 60));
 
         PanelAgregar.add(adminPanelAddPais, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 880, 430));
 
@@ -463,16 +601,17 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JTextField AdminAddUserFecha;
     private javax.swing.JTextField AdminAddUserPais;
     private javax.swing.JButton BtnConsultar;
+    private javax.swing.JButton BtnSelectTabla;
     private javax.swing.JComboBox<String> OpcConsul;
     private javax.swing.JPanel PanelAgregar;
     private javax.swing.JPanel PanelConsultas;
     private javax.swing.JTextField adminAddAerCiudad;
     private javax.swing.JTextField adminAddAerSiglas;
-    private javax.swing.JTextField adminAddAerSiglas1;
     private javax.swing.JTextField adminAddAeridNomAer;
     private javax.swing.JTextField adminAddCiuPais;
     private javax.swing.JTextField adminAddCiu_id_Nom_Ciudad;
     private javax.swing.JTextField adminAddPaisIdCodPais;
+    private javax.swing.JTextField adminAddPaisNombre;
     private javax.swing.JTextField adminAddUserApellido;
     private javax.swing.JTextField adminAddUserNombre;
     private javax.swing.JTextField adminAddUserPasaporte;
@@ -494,7 +633,6 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JButton adminSalirAdd;
     private javax.swing.JButton adminSalirConsul;
     private javax.swing.JComboBox<String> adminSelTablaAgregar;
-    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;

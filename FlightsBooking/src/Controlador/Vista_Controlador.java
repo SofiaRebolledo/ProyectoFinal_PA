@@ -176,10 +176,35 @@ public class Vista_Controlador{
                 adminConsultar();
             }
         });
+        vista.getBotonAgregar().addMouseListener(new MouseAdapter() {
+        @Override
+        public void mouseClicked(MouseEvent e)  
+        {  
+            adminVistaAdd();
+        }
+        });
         admin.getAdminSalirConsul().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 admin.setVisible(false);
+            }
+        });
+        admin.getAdminSalirAdd().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                admin.setVisible(false);
+            }
+        });
+        admin.getBtnSelectTabla().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                adminSelAddTable();
+            }
+        });
+        admin.getAdminBtnAdd().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                adminAgregar();
             }
         });
     }
@@ -332,7 +357,6 @@ public class Vista_Controlador{
         }
     }
     
-    
     public void ayuda(){
         vista.getPanelAyuda().setVisible(true);
         vista.getPanelPrincipal().setVisible(false);
@@ -376,6 +400,7 @@ public class Vista_Controlador{
     
     public void adminVistaConsultar(){
         admin.setVisible(true);
+        admin.getPanelAgregar().setVisible(false);
         admin.getPanelConsultas().setVisible(true);
         admin.getPanelConsulUsuarios().setVisible(false);
         admin.getPanelConsulPais().setVisible(false);
@@ -604,6 +629,134 @@ public class Vista_Controlador{
             }
         }
         
+    }
+    
+    public void adminVistaAdd(){
+        admin.setVisible(true);
+        admin.getPanelConsultas().setVisible(false);
+        admin.getPanelAgregar().setVisible(true);
+        admin.getAdminPanelAddAeropuerto().setVisible(false);
+        admin.getAdminPanelAddCiu().setVisible(false);
+        admin.getAdminPanelAddPais().setVisible(false);
+        admin.getAdminPanelAddUsuario().setVisible(false);
+        admin.getAdminPanelAddVuelo().setVisible(false);
+    }
+    
+    public void adminSelAddTable(){
+        String Tabla = admin.getAdminSelTablaAgregar().getSelectedItem().toString();
+        if(Tabla.equals("Usuario")){
+            admin.getAdminPanelAddUsuario().setVisible(true);
+            admin.getAdminPanelAddPais().setVisible(false);
+            admin.getAdminPanelAddCiu().setVisible(false);
+            admin.getAdminPanelAddAeropuerto().setVisible(false);
+            admin.getAdminPanelAddVuelo().setVisible(false);
+        }
+        if(Tabla.equals("Pais")){
+            admin.getAdminPanelAddUsuario().setVisible(false);
+            admin.getAdminPanelAddPais().setVisible(true);
+            admin.getAdminPanelAddCiu().setVisible(false);
+            admin.getAdminPanelAddAeropuerto().setVisible(false);
+            admin.getAdminPanelAddVuelo().setVisible(false);
+        }
+        if(Tabla.equals("Ciudad")){
+            admin.getAdminPanelAddUsuario().setVisible(false);
+            admin.getAdminPanelAddPais().setVisible(false);
+            admin.getAdminPanelAddCiu().setVisible(true);
+            admin.getAdminPanelAddAeropuerto().setVisible(false);
+            admin.getAdminPanelAddVuelo().setVisible(false);
+        }
+        if(Tabla.equals("Aeropuerto")){
+            admin.getAdminPanelAddUsuario().setVisible(false);
+            admin.getAdminPanelAddPais().setVisible(false);
+            admin.getAdminPanelAddCiu().setVisible(false);
+            admin.getAdminPanelAddAeropuerto().setVisible(true);
+            admin.getAdminPanelAddVuelo().setVisible(false);
+        }
+        if(Tabla.equals("Vuelo")){
+            admin.getAdminPanelAddUsuario().setVisible(false);
+            admin.getAdminPanelAddPais().setVisible(false);
+            admin.getAdminPanelAddCiu().setVisible(false);
+            admin.getAdminPanelAddAeropuerto().setVisible(false);
+            admin.getAdminPanelAddVuelo().setVisible(true);
+        }
+    }
+    
+    public void adminAgregar(){
+        String Tabla = admin.getAdminSelTablaAgregar().getSelectedItem().toString();
+        String data = "";
+        if(Tabla.equals("Usuario") && !control.espacioVacio(admin.getAdminAddUserPasaporte().getText()) &&
+                !control.espacioVacio(admin.getAdminAddUserNombre().getText()) && !control.espacioVacio(admin.getAdminAddUserApellido().getText())
+                && !control.espacioVacio(admin.getAdminAddUserContrasena().getText()) && !control.espacioVacio(admin.getAdminAddUserPais().getText()) &&
+                !control.espacioVacio(admin.getAdminAddUserCelular().getText()) && !control.espacioVacio(admin.getAdminAddUserCorreo().getText()) &&
+                !control.espacioVacio(admin.getAdminAddUserFecha().getText())){
+            data = "(Pasaporte, Nombre, Apellido, Contrasena, Pais, Celular, Correo, Fecha_Nacimiento)"
+                    + "VALUES ('"+admin.getAdminAddUserPasaporte().getText()+"','"+admin.getAdminAddUserNombre().getText()+"',"
+                    + "'"+admin.getAdminAddUserApellido().getText()+"','"+admin.getAdminAddUserContrasena().getText()+"',"
+                    + "'"+admin.getAdminAddUserPais().getText()+"','"+admin.getAdminAddUserCelular().getText()+"',"
+                    + "'"+admin.getAdminAddUserCorreo().getText()+"','"+admin.getAdminAddUserFecha().getText()+"');";
+            admin.getAdminAddUserPasaporte().setText("");
+            admin.getAdminAddUserNombre().setText("");
+            admin.getAdminAddUserApellido().setText("");
+            admin.getAdminAddUserContrasena().setText("");
+            admin.getAdminAddUserPais().setText("");
+            admin.getAdminAddUserCelular().setText("");
+            admin.getAdminAddUserCorreo().setText("");
+            admin.getAdminAddUserFecha().setText("");
+        }
+        else{
+            if(Tabla.equals("Pais") && !control.espacioVacio(admin.getAdminAddPaisIdCodPais().getText())&&!control.espacioVacio(admin.getAdminAddPaisNombre().getText())){
+                data = "(id_Cod_Pais, Nombre) VALUES ('"+admin.getAdminAddPaisIdCodPais().getText()+"', '"+admin.getAdminAddPaisNombre().getText()+"');";
+                admin.getAdminAddPaisIdCodPais().setText("");
+                admin.getAdminAddPaisNombre().setText("");
+            }
+            else{
+                if(Tabla.equals("Ciudad")&&!control.espacioVacio(admin.getAdminAddCiu_id_Nom_Ciudad().getText())&&!control.espacioVacio(admin.getAdminAddCiuPais().getText())){
+                    data = "(id_Nom_Ciudad, Pais) VALUES ('"+admin.getAdminAddCiu_id_Nom_Ciudad().getText()+"','"+admin.getAdminAddCiuPais().getText()+"');";
+                    admin.getAdminAddCiu_id_Nom_Ciudad().setText("");
+                    admin.getAdminAddCiuPais().setText("");
+                }
+                else{
+                    if(Tabla.equals("Aeropuerto")&&!control.espacioVacio(admin.getAdminAddAeridNomAer().getText())&&!control.espacioVacio(admin.getAdminAddAerSiglas().getText())&&
+                            !control.espacioVacio(admin.getAdminAddAerCiudad().getText())){
+                        data = "(id_Nom_Aeropuerto, Siglas, Ciudad) VALUES ('"+admin.getAdminAddAeridNomAer().getText()+"', '"+admin.getAdminAddAerSiglas().getText()+"',"
+                                + "'"+admin.getAdminAddAerCiudad().getText()+"');";
+                        admin.getAdminAddAeridNomAer().setText("");
+                        admin.getAdminAddAerSiglas().setText("");
+                        admin.getAdminAddAerCiudad().setText("");
+                    }
+                    else{
+                        if(Tabla.equals("Vuelo")&& !control.espacioVacio(admin.getAdminAddVueloIdVuelo().getText()) && !control.espacioVacio(admin.getAdminAddVueloIdUser().getText()) &&
+                                !control.espacioVacio(admin.getAdminAddVueloAerOri().getText()) && !control.espacioVacio(admin.getAdminAddVueloAerDest().getText()) && !control.espacioVacio(admin.getAdminAddVueloHoraP().getText())&&
+                                !control.espacioVacio(admin.getAdminAddVueloHoraLL().getText())&&!control.espacioVacio(admin.getAdminAddVueloDistancia().getText())&&!control.espacioVacio(admin.getAdminAddVueloDura().getText())&&
+                                !control.espacioVacio(admin.getAdminAddVueloCosto().getText())){
+                            data = "(id_Vuelo, id_Usuario, Aeropuerto_Origen, Aeropuerto_Destino, Hora_Partida, Hora_Llegada, Distancia, Duracion, Costo) VALUES"
+                                    + "('"+admin.getAdminAddVueloIdVuelo().getText()+"', '"+admin.getAdminAddVueloIdUser().getText()+"', '"+admin.getAdminAddVueloAerOri().getText()+"',"
+                                    + "'"+admin.getAdminAddVueloAerDest().getText()+"','"+admin.getAdminAddVueloHoraP().getText()+"','"+admin.getAdminAddVueloHoraLL().getText()+"',"
+                                    + "'"+admin.getAdminAddVueloDistancia().getText()+"','"+admin.getAdminAddVueloDura().getText()+"','"+admin.getAdminAddVueloCosto().getText()+"');";
+                            admin.getAdminAddVueloIdVuelo().setText("");
+                            admin.getAdminAddVueloIdUser().setText("");
+                            admin.getAdminAddVueloAerOri().setText("");
+                            admin.getAdminAddVueloAerDest().setText("");
+                            admin.getAdminAddVueloHoraP().setText("");
+                            admin.getAdminAddVueloHoraLL().setText("");
+                            admin.getAdminAddVueloDistancia().setText("");
+                            admin.getAdminAddVueloDura().setText("");
+                            admin.getAdminAddVueloCosto().setText("");
+                        }
+                        else{
+                            JOptionPane.showMessageDialog(null,"Alguno de tus datos es erroneo, por favor revisa.");
+                        }
+                    }
+                }
+            }
+        }
+        String sql = "INSERT INTO "+Tabla+" "+data;
+        try {
+            conectar.getComando().executeUpdate(sql);
+            JOptionPane.showMessageDialog(null,"Registro Exitoso!");
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,"Alguno de tus datos es erroneo, por favor revisa.");
+        }
     }
     
     public void Salir(){
