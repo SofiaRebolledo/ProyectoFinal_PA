@@ -49,10 +49,8 @@ public class Vista_Controlador{
         vista.getPanelCuenta().setVisible(false);
         vista.getPanelInicial().setVisible(true);
         vista.getPanelInternoModificarDatos().setVisible(false);
-        vista.getPanelMisViajes().setVisible(false);
         vista.getPanelModificarDatos().setVisible(false);
         vista.getPanelMostrarAdministrador().setVisible(false);
-        vista.getPanelNotificacion().setVisible(false);
         vista.getPanelPrincipal().setVisible(false);
         vista.getPanelRegistro().setVisible(false);
     }

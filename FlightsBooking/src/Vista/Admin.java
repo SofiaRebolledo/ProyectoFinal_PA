@@ -239,10 +239,12 @@ public class Admin extends javax.swing.JFrame {
 
         PanelConsultas = new javax.swing.JPanel();
         OpcConsul = new javax.swing.JComboBox<>();
+        adminSalirConsul = new javax.swing.JButton();
         BtnConsultar = new javax.swing.JButton();
         panelConsulUsuarios = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tablaConsul = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
         panelConsulPais = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tablaConsulPais = new javax.swing.JTable();
@@ -255,7 +257,6 @@ public class Admin extends javax.swing.JFrame {
         panelConsulVuelo = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
         tablaConsulVuelo = new javax.swing.JTable();
-        adminSalirConsul = new javax.swing.JButton();
         PanelAgregar = new javax.swing.JPanel();
         adminSelTablaAgregar = new javax.swing.JComboBox<>();
         BtnSelectTabla = new javax.swing.JButton();
@@ -299,6 +300,14 @@ public class Admin extends javax.swing.JFrame {
         OpcConsul.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Usuario", "Pais", "Ciudad", "Aeropuerto", "Vuelo" }));
         PanelConsultas.add(OpcConsul, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 523, -1));
 
+        adminSalirConsul.setText("X");
+        adminSalirConsul.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adminSalirConsulActionPerformed(evt);
+            }
+        });
+        PanelConsultas.add(adminSalirConsul, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 0, 50, -1));
+
         BtnConsultar.setText("Consultar");
         BtnConsultar.setToolTipText("");
         BtnConsultar.addActionListener(new java.awt.event.ActionListener() {
@@ -328,9 +337,12 @@ public class Admin extends javax.swing.JFrame {
             tablaConsul.getColumnModel().getColumn(7).setHeaderValue("Fecha_Nacimiento");
         }
 
-        panelConsulUsuarios.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 3, 880, 480));
+        panelConsulUsuarios.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 3, 810, 480));
 
-        PanelConsultas.add(panelConsulUsuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 31, -1, -1));
+        PanelConsultas.add(panelConsulUsuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 31, 850, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Fondo.png"))); // NOI18N
+        PanelConsultas.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, -6, -1, 570));
 
         panelConsulPais.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -395,14 +407,6 @@ public class Admin extends javax.swing.JFrame {
         panelConsulVuelo.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 480));
 
         PanelConsultas.add(panelConsulVuelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 32, 870, 480));
-
-        adminSalirConsul.setText("X");
-        adminSalirConsul.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                adminSalirConsulActionPerformed(evt);
-            }
-        });
-        PanelConsultas.add(adminSalirConsul, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 0, 50, -1));
 
         PanelAgregar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -529,15 +533,17 @@ public class Admin extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PanelConsultas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(PanelConsultas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 39, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(PanelAgregar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 913, Short.MAX_VALUE))
+                .addComponent(PanelAgregar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 923, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PanelConsultas, javax.swing.GroupLayout.DEFAULT_SIZE, 557, Short.MAX_VALUE)
+            .addComponent(PanelConsultas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(PanelAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, 557, Short.MAX_VALUE))
+                .addComponent(PanelAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, 595, Short.MAX_VALUE))
         );
 
         pack();
@@ -633,6 +639,8 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JButton adminSalirAdd;
     private javax.swing.JButton adminSalirConsul;
     private javax.swing.JComboBox<String> adminSelTablaAgregar;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
