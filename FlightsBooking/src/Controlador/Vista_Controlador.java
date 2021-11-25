@@ -9,13 +9,18 @@ import Modelo.Usuario;
 import Modelo.Vuelo;
 import Vista.Admin;
 import Vista.VistaInicial;
+import com.toedter.calendar.JDateChooser;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.Date;
 import java.sql.SQLException;
+import java.sql.Time;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -28,7 +33,7 @@ public class Vista_Controlador{
     protected Pais pais = new Pais();
     protected Ciudad ciudad = new Ciudad();
     protected Aeropuerto aer = new Aeropuerto();
-    protected Vuelo vuelo = new Vuelo();
+    protected Vuelo vuelo = null;
     protected VistaInicial vista = new VistaInicial();
     protected Admin admin = new Admin();
     protected ErrorValidacion control = new ErrorValidacion();
@@ -204,6 +209,20 @@ public class Vista_Controlador{
             public void actionPerformed(ActionEvent ae) {
                 adminAgregar();
             }
+        });
+        vista.getBtnBuscarVuelos().addMouseListener(new MouseAdapter() {
+        @Override
+        public void mouseClicked(MouseEvent e)  
+        {  
+            genVuelo();
+        }
+        });
+        vista.getBotonComprar().addMouseListener(new MouseAdapter() {
+        @Override
+        public void mouseClicked(MouseEvent e)  
+        {  
+            comprarVuelo();
+        }
         });
     }
     
@@ -577,17 +596,11 @@ public class Vista_Controlador{
                             try {
                                 conectar.setRs(conectar.getComando().executeQuery(sql));
                                 while(conectar.getRs().next()){
-                                    vuelo.setId_Vuelo(conectar.getRs().getInt("id_Vuelo"));
-                                    vuelo.setId_Usuario(conectar.getRs().getString("id_Usuario"));
-                                    vuelo.setAeropuerto_Origen(conectar.getRs().getString("Aeropuerto_Origen"));
-                                    vuelo.setAeropuerto_Destino(conectar.getRs().getString("Aeropuerto_Destino"));
-                                    vuelo.setHora_Partida(conectar.getRs().getTime("Hora_Partida"));
-                                    vuelo.setHora_Llegada(conectar.getRs().getTime("Hora_Llegada"));
-                                    vuelo.setDistancia(conectar.getRs().getInt("Distancia"));
-                                    vuelo.setDuracion(conectar.getRs().getTime("Duracion"));
-                                    vuelo.setCosto(conectar.getRs().getInt("Costo"));
                                     Lista.add(vuelo);
-                                    vuelo = new Vuelo();
+                                    vuelo = new Vuelo(conectar.getRs().getString("id_Vuelo"),conectar.getRs().getString("id_Usuario"),
+                                    conectar.getRs().getString("Aeropuerto_Origen"),conectar.getRs().getString("Aeropuerto_Destino"),
+                                    conectar.getRs().getTime("Hora_Partida"),conectar.getRs().getTime("Hora_Llegada"),conectar.getRs().getInt("Distancia"),
+                                    conectar.getRs().getTime("Duracion"), conectar.getRs().getInt("Costo"));
                                 }
                             } catch (SQLException ex) {
                                 Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
@@ -708,7 +721,7 @@ public class Vista_Controlador{
                                 + "'"+admin.getAdminAddAerCiudad().getText()+"');";
                         }
                     else{
-                        if(Tabla.equals("Vuelo")&& !control.espacioVacio(admin.getAdminAddVueloIdVuelo().getText()) && !control.espacioVacio(admin.getAdminAddVueloIdUser().getText()) &&
+                        if(Tabla.equals("Vuelo")&& !control.espacioVacio(admin.getAdminAddVueloIdVuelo().getText())&& !control.espacioVacio(admin.getAdminAddVueloIdUser().getText()) &&
                                 !control.espacioVacio(admin.getAdminAddVueloAerOri().getText()) && !control.espacioVacio(admin.getAdminAddVueloAerDest().getText()) && !control.espacioVacio(admin.getAdminAddVueloHoraP().getText())&&
                                 !control.espacioVacio(admin.getAdminAddVueloHoraLL().getText())&&!control.espacioVacio(admin.getAdminAddVueloDistancia().getText())&&!control.espacioVacio(admin.getAdminAddVueloDura().getText())&&
                                 !control.espacioVacio(admin.getAdminAddVueloCosto().getText())){
@@ -755,6 +768,73 @@ public class Vista_Controlador{
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null,"Alguno de tus datos es erroneo, por favor revisa.");
         }        
+    }
+    
+    public void genVuelo(){
+        if(!control.espacioVacio(vista.getC_Personas().getText())){
+            vista.getPanelConfirmacionProcesoVuelo().setVisible(false);
+            Random random = new Random();
+            String Desde = vista.getjComboDESDE().getSelectedItem().toString();
+            String Hasta = vista.getjComboHACIA().getSelectedItem().toString();
+            Time HoraP = new Time(random.nextLong());
+            Time HoraL = new Time(random.nextLong());
+            Time Dur = new Time(HoraL.getTime()-HoraP.getTime());
+            java.util.Date FechaSalida = vista.getjDateSalida().getDate();
+            java.sql.Date F_Salida = new java.sql.Date(FechaSalida.getTime());
+            java.sql.Date F_Llegada = F_Salida;
+            int Distancia = random.nextInt(100000);
+            int Costo = random.nextInt(10000000);
+            int Personas = Integer.parseInt(vista.getC_Personas().getText());
+            vista.getOpcion1().setEditable(false);
+            vista.getOpcion1().setWrapStyleWord(true);
+            vista.getOpcion1().setLineWrap(true);
+            vista.getOpcion2().setEditable(false);
+            vista.getOpcion2().setWrapStyleWord(true);
+            vista.getOpcion2().setLineWrap(true);
+            vista.getOpcion3().setEditable(false);
+            vista.getOpcion3().setWrapStyleWord(true);
+            vista.getOpcion3().setLineWrap(true);
+            vuelo = new Vuelo(Pasaporte+String.valueOf(random.nextInt(Costo)), Pasaporte,
+                                Desde,Hasta, HoraP,HoraL,Distancia, Dur, Costo);
+            System.out.println(vuelo.getId_Vuelo()+"\n"+vuelo.getId_Usuario());
+            String sql = "INSERT INTO Vuelo (id_Vuelo, id_Usuario, Aeropuerto_Origen, Aeropuerto_Destino, Hora_Partida, Hora_Llegada, Distancia, Duracion, Costo) VALUES "
+                    + "('"+vuelo.getId_Vuelo()+"','"+vuelo.getId_Usuario()+"','"+vuelo.getAeropuerto_Origen()+"',"
+                    + "'"+vuelo.getAeropuerto_Destino()+"','"+vuelo.getHora_Partida()+"','"+vuelo.getHora_Llegada()+"',"
+                    + "'"+vuelo.getDistancia()+"','"+vuelo.getDuracion()+"', '"+vuelo.getCosto()*Personas+"');";
+            System.out.println(sql);
+            try {
+                conectar.getComando().executeUpdate(sql);
+            } catch (SQLException ex) {
+                Logger.getLogger(Vista_Controlador.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+            vista.getOpcion1().setText("*Básico* \nDesde:"+Desde+" Destino:"+Hasta+" Hora:"+HoraP+" Costo:"+Costo*Personas+" No incluye comida");
+            vista.getOpcion2().setText("**Premium** \nDesde:"+Desde+" Destino:"+Hasta+" Hora:"+HoraP+" Costo:"+Costo*2*Personas+" Incluye comida");
+            vista.getOpcion3().setText("***Business*** \nDesde:"+Desde+" Destino:"+Hasta+" Hora:"+HoraP+" Costo:"+Costo*3*Personas+" Incluye comida");
+            vista.getPanelBusquedaVuelos().setVisible(true);
+            vista.getPanelPrincipal().setVisible(false);
+        }
+    }
+    
+    public void comprarVuelo(){
+        String dato = JOptionPane.showInputDialog(vista,"Ingresa la opción a comprar");
+        if(control.datoNumerico(dato)){
+            int Tipo = Integer.parseInt(dato);
+            if(control.verificarRango(3, 1, Tipo)){
+                String sql = "UPDATE Vuelo SET Costo='"+vuelo.getCosto()*Tipo+"' where id_Usuario='"+Pasaporte+"';";
+                try {
+                    conectar.getComando().executeUpdate(sql);
+                    JOptionPane.showMessageDialog(vista,"Compra Exitosa!!");
+                    vista.getPanelBusquedaVuelos().setVisible(false);
+                    vista.getPanelPrincipal().setVisible(true);
+                } catch (SQLException ex) {
+                    Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+                } 
+            }
+            else{
+                JOptionPane.showMessageDialog(vista,"Alguno de tus datos es erroneo, por favor revisa.");
+            }
+        }
     }
     
     public void Salir(){

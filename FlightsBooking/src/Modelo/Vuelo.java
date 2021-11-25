@@ -5,7 +5,7 @@ import java.sql.Time;
 
 public class Vuelo {
     
-    protected int id_Vuelo;
+    protected String id_Vuelo;
     protected String id_Usuario;
     protected String Aeropuerto_Origen;
     protected String Aeropuerto_Destino;
@@ -15,11 +15,23 @@ public class Vuelo {
     protected Time Duracion;
     protected int Costo;
 
-    public int getId_Vuelo() {
+    public Vuelo(String id_Vuelo, String id_Usuario, String Aeropuerto_Origen, String Aeropuerto_Destino, Time Hora_Partida, Time Hora_Llegada, int Distancia, Time Duracion, int Costo) {
+        this.id_Vuelo = id_Vuelo;
+        this.id_Usuario = id_Usuario;
+        this.Aeropuerto_Origen = Aeropuerto_Origen;
+        this.Aeropuerto_Destino = Aeropuerto_Destino;
+        this.Hora_Partida = Hora_Partida;
+        this.Hora_Llegada = Hora_Llegada;
+        this.Distancia = Distancia;
+        this.Duracion = Duracion;
+        this.Costo = Costo;
+    }
+
+    public String getId_Vuelo() {
         return id_Vuelo;
     }
 
-    public void setId_Vuelo(int id_Vuelo) {
+    public void setId_Vuelo(String id_Vuelo) {
         this.id_Vuelo = id_Vuelo;
     }
 

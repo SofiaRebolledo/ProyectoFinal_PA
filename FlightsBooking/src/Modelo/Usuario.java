@@ -84,9 +84,6 @@ public class Usuario extends Conexion{
         this.Fecha = Fecha;
     }
     
-    
-    
-    
     public boolean registrarUsuario(String Pasaporte, String Nombre, String Apellido, String Contrasena, String Pais, String Celular, String Correo, Date Fecha_Nacimiento){
         sql = "INSERT INTO Usuario(Pasaporte, Nombre, Apellido, Contrasena, Pais, Celular, Correo, Fecha_Nacimiento)"
                 + "VALUES ('"+Pasaporte+"', '"+Nombre+"', '"+Apellido+"', '"+Contrasena+"', '"+Pais+"', '"+Celular+"', '"+Correo+"', Date '"+Fecha_Nacimiento+"');";

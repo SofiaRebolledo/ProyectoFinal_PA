@@ -21,4 +21,21 @@ public class ErrorValidacion {
         }
         return true;
     }
+    
+    public boolean verificarRango(int Mayor, int Menor, int Dato){
+        if(Dato>=Menor && Dato<=Mayor){
+            return true;
+        }
+        return false;
+    }
+    
+    public boolean datoNumerico(String Dato){
+        try{
+            Integer.parseInt(Dato);
+            return true;
+        }
+        catch(Exception ex){
+            return false;
+        }
+    }
 }
